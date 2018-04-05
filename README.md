@@ -2,7 +2,7 @@
 Supercharge your JavaScript!
 ## Requirements
 - [Node.js](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/en/)
+- [Yarn](https://yarnpkg.com/en/) (optionnal)
 
 ## Installation
 Copies the project from GitHub & installs all required dependencies.
