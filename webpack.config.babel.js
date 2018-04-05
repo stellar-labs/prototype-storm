@@ -10,7 +10,7 @@ export default env => {
           [`${file.substring(0, file.indexOf('.'))}`]: `${__dirname}/src/js/${file}`
         })
       }, {}),
-      string: files.map(file => `${__dirname}/src/js/${file}`)
+      'prototype-storm': files.map(file => `${__dirname}/src/js/${file}`)
     },
     output: {
       path: `${__dirname}/dist/`,
