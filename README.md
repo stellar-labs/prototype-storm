@@ -8,7 +8,7 @@ Supercharge your JavaScript!
 var age = document.getElementById('#age').value;
 
 if( ! age.test({ regexp: '/^[\d.]+$/' }) ) {
-	alert('Your age should be a number...');
+  alert('Your age should be a number...');
 }
 ```
 
@@ -16,7 +16,7 @@ if( ! age.test({ regexp: '/^[\d.]+$/' }) ) {
 var file_name = document.getElementById('#file-name');
 
 if( ! file_name.endsWith({ match: '.spec.js', caseSensitive: true }) ) {
-	alert('The file name should end with ".spec.js"');
+  alert('The file name should end with ".spec.js"');
 }
 ```
 
@@ -34,15 +34,15 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ```html
 <body>
-	<!-- ... -->
-	<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-test.min.js"></script>
-	<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-ends-with.min.js"></script>
+  <!-- ... -->
+  <script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-test.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-ends-with.min.js"></script>
 
-	<script type="text/javascript">
-		window.addEventListener('load', function() {
-			// ...
-		});
-	</script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      // ...
+    });
+  </script>
 </body>
 ```
 
