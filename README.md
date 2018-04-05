@@ -62,10 +62,6 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ### Using `ellipsis`
 
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-ellipsis.min.js"></script>
-```
-
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-ellipsis.min.js
 ```
@@ -89,10 +85,6 @@ Are you James???
 ```
 
 ### Using `empty`
-
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-empty.min.js"></script>
-```
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-empty.min.js
@@ -118,10 +110,6 @@ false
 
 ### Using `nl2br`
 
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-nl2br.min.js"></script>
-```
-
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-nl2br.min.js
 ```
@@ -143,10 +131,6 @@ Hi<br/>How are you?
 
 ### Using `shuffle`
 
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-shuffle.min.js"></script>
-```
-
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-shuffle.min.js
 ```
@@ -165,10 +149,6 @@ tJarciavSp
 ```
 
 ### Using `stripTags`
-
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-stripTags.min.js"></script>
-```
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-stripTags.min.js
