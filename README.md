@@ -18,7 +18,7 @@ $ git clone https://github.com/khalyomede/string && npm i # short syntax
 ```
 [NPM documentation](https://docs.npmjs.com/cli/install).
 ## Testing
-Use Jasmine as the testing engine for javascript files.
+Uses Jasmine as the testing engine for javascript files.
 ### Yarn
 ```shell
 $ yarn run jasmine:test # original syntax
