@@ -8,13 +8,13 @@ Supercharge your JavaScript!
 Copies the project from GitHub & installs all required dependencies.
 ### Yarn
 ```shell
-$ git clone https://github.com/khalyomede/string && yarn install
+$ git clone https://github.com/stellar-labs/prototype-storm && yarn install
 ```
 [Yarn documentation](https://yarnpkg.com/en/docs/cli/install).
 ### NPM
 ```shell
-$ git clone https://github.com/khalyomede/string && npm install # original syntax
-$ git clone https://github.com/khalyomede/string && npm i # short syntax
+$ git clone https://github.com/stellar-labs/prototype-storm && npm install # original syntax
+$ git clone https://github.com/stellar-labs/prototype-storm && npm i # short syntax
 ```
 [NPM documentation](https://docs.npmjs.com/cli/install).
 ## Testing
