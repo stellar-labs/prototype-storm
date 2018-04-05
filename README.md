@@ -54,12 +54,13 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ## Examples of uses
 
-- [Using `ellipsis`](#using-ellipsis)
-- [Using `empty`](#using-empty)
-- [Using `nl2br`](#using-nl2br)
-- [Using `shuffle`](#using-shuffle)
-- [Using `stripTags`](#using-striptags)
-- [Using `test`](#using-test)
+- String
+  - [Using `ellipsis`](#using-ellipsis)
+  - [Using `empty`](#using-empty)
+  - [Using `nl2br`](#using-nl2br)
+  - [Using `shuffle`](#using-shuffle)
+  - [Using `stripTags`](#using-striptags)
+  - [Using `test`](#using-test)
 
 ### Using `ellipsis`
 
@@ -187,12 +188,13 @@ false
 
 ## Methods definitions
 
-- [`ellipsis`](#ellipsis)
-- [`empty`](#empty)
-- [`nl2br`](#nl2br)
-- [`shuffle`](#shuffle)
-- [`stripTags`](#stripTags)
-- [`test`](#test)
+- String
+  - [`ellipsis`](#ellipsis)
+  - [`empty`](#empty)
+  - [`nl2br`](#nl2br)
+  - [`shuffle`](#shuffle)
+  - [`stripTags`](#stripTags)
+  - [`test`](#test)
 
 ### `ellipsis`
 
