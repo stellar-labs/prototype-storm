@@ -12,14 +12,9 @@ $ git clone https://github.com/khalyomede/string && yarn install
 ```
 [Yarn documentation](https://yarnpkg.com/en/docs/cli/install).
 ### NPM
-#### Original Syntax
 ```shell
-$ git clone https://github.com/khalyomede/string && npm install
-```
-[NPM documentation](https://docs.npmjs.com/cli/install).
-#### Short Syntax
-```shell
-$ git clone https://github.com/khalyomede/string && npm i
+$ git clone https://github.com/khalyomede/string && npm install # original syntax
+$ git clone https://github.com/khalyomede/string && npm i # short syntax
 ```
 [NPM documentation](https://docs.npmjs.com/cli/install).
 ## Testing
