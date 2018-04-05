@@ -59,6 +59,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 - [Using `nl2br`](#using-nl2br)
 - [Using `shuffle`](#using-shuffle)
 - [Using `stripTags`](#using-striptags)
+- [Using `test`](#using-test)
 
 ### Using `ellipsis`
 
@@ -166,6 +167,24 @@ Will display:
 HomeWelcome to my website!
 ```
 
+### Using `test`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-test.min.js
+```
+
+```javascript
+var email = 'test';
+
+console.log( email.test('/.*@.*/') )
+```
+
+Will display:
+
+```
+false
+```
+
 ## Methods definitions
 
 - [`ellipsis`](#ellipsis)
@@ -173,6 +192,7 @@ HomeWelcome to my website!
 - [`nl2br`](#nl2br)
 - [`shuffle`](#shuffle)
 - [`stripTags`](#stripTags)
+- [`test`](#test)
 
 ### `ellipsis`
 
@@ -222,3 +242,15 @@ Returns the string and remove all the html tags inside of it.
 ```javascript
 String.prototype.stripTags = function(): String
 ```
+
+### `test`
+
+Returns true if the string passes the regexp test, else returns false.
+
+```javascript
+String.prototype.test = function(Object): Boolean
+```
+
+**Options**
+
+- `regexp`: required, string or regexp, no default: The regular expression to test
