@@ -7,7 +7,7 @@ export default env => {
     entry: {
       ...files.reduce((entries, file) => {
         return Object.assign(entries, {
-          [`${file.substring(0, file.indexOf('.'))}`]: `${__dirname}/src/js/${file}`
+          [`prototype-storm-${file.substring(0, file.indexOf('.'))}`]: `${__dirname}/src/js/${file}`
         })
       }, {}),
       'prototype-storm': files.map(file => `${__dirname}/src/js/${file}`)
