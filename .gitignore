@@ -1,0 +1,8 @@
+*
+!.gitignore
+!spec
+!src
+!.babelrc
+!package.json
+!README.md
+!webpack.config.babel.js

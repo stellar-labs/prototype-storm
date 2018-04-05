@@ -1,0 +1,20 @@
+{
+  "name": "jasmine-test",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "jasmine": "^3.1.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "scripts": {
+    "jasmine:init": "jasmine init",
+    "jasmine:test": "babel-node spec/run.js",
+    "build": "webpack --env.production"
+  }
+}

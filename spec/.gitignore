@@ -1,0 +1,5 @@
+*
+!.gitignore
+!support
+!*.spec.js
+!run.js
