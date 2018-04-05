@@ -4,7 +4,9 @@ Supercharge your JavaScript!
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/) (optionnal)
 
-## Installation
+## Notice
+Headers marked with the :exclamation: requires a broadband connection in order to succeed.
+## Installation :exclamation:
 Copies the project from GitHub & installs all required dependencies.
 ### Yarn
 ```shell
