@@ -8,3 +8,5 @@
 !webpack.config.babel.js
 !dist
 !LICENSE
+!TODO.md
+!webpack
