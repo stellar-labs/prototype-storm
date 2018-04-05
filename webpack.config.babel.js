@@ -1,6 +1,6 @@
 'use strict'
 import fs from 'fs'
-const files = fs.readdirSync(`${__dirname}/src/js`)
+const files = fs.readdirSync(`${__dirname}/src/js`).filter(file => file !== '.gitignore')
 export default env => {
   return {
     mode: env.production ? 'production': 'development',
