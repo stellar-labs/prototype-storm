@@ -15,6 +15,7 @@
   "scripts": {
     "jasmine:init": "jasmine init",
     "jasmine:test": "babel-node spec/run.js",
-    "build": "webpack --env.production"
+    "build": "webpack --env.production",
+    "make": "node make"
   }
 }
