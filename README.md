@@ -225,7 +225,7 @@ String.prototype.nl2br = function(Object): String
 
 **Options**
 
-- `strict`: optional, boolean, default `false`: if true, it will display XHTML compatible `<br />` tag instead of `<br>`
+- `strict`: optional, boolean, default `false`: if true, it replace the return lines with XHTML compatible `<br />` tag instead of `<br>`
 
 ### `shuffle`
 
