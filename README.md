@@ -139,10 +139,9 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 
 ```javascript
 var text = 'JavaScript';
-```
 
 console.log( text.shuffle() );
-
+```
 
 Will display:
 
