@@ -19,7 +19,8 @@
     "jasmine:test": "babel-node spec/run.js",
     "build": "webpack --env.production",
     "make": "node make",
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register",
+    "test:string": "mocha --compilers js:babel-core/register test/string"
   },
   "dependencies": {}
 }
