@@ -1,63 +1,75 @@
 fs = require('fs');
 
+/**
+ * @todo import camelCase from './src/js/string/camel-case.js';
+ */
+function camelCase(str) {
+	return str.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
+}
+
 const argument_count = process.argv.length;
 
 // Checks if the argument count is correct
-if( argument_count !== 3 ) {
-	throw 'make expects parameter 1 to be set';
+if( argument_count !== 4 ) {
+	throw 'make usage: npm make <type> <feature> (example: npm make string begins-with';
 }
 
-argument = process.argv[2]
+const folder = process.argv[2];
+const feature = process.argv[3];
 
 // Checks if the file do not already exists
-file_exists = fs.existsSync('./src/js/' + argument + '.js');
+file_exists = fs.existsSync('./src/js/' + folder + '/' + feature + '.js');
 
 if( file_exists === true ) {
-	throw '"src/js/' + argument + '.js" already exists, command canceled.';
+	throw '"src/js/' + folder + '/' + feature + '.js" already exists, command canceled.';
 }
 
 // Checks if the spec does not already exists
-file_exists = fs.existsSync('./spec/' + argument + '.js');
+file_exists = fs.existsSync('./test/' + folder + '/' + feature + '.js');
 
 if( file_exists === true ) {
-	throw '"spec/' + argument + '.js" already exists, command canceled.';
+	throw '"test/' + folder + '/' + feature + '.js" already exists, command canceled.';
 }
 
 // Create the file 
 var code = `'use strict'
 
-if( '` + argument + `' in String.prototype === false ) {
-	String.prototype.`+ argument + ` = function() {
-		// have fun!
-	};
+if( '` + feature + `' in String.prototype === false ) {
+\tString.prototype.`+ camelCase(feature) + ` = function() {
+\t\t// have fun!
+\t};
 }
+
+export default String.prototype.` + feature + `;
 `;
 
-fs.writeFileSync('./src/js/' + argument + '.js', code, 'utf8', function(error) {
+fs.writeFileSync('./src/js/' + folder + '/' + feature + '.js', code, 'utf8', function(error) {
 	if( error ) {
-		throw 'Could not create the file src/js/' + argument + '.js';
+		throw 'Could not create the file src/js/' + feature + '.js';
 	}
 });
 
-console.log('src/js/' + argument + '.js prototype created.');
+console.log('src/js/' + folder + '/' + feature + '.js prototype created.');
 
 code = `'use strict'
 
-import ` + argument + ` from '../../src/js/` + argument + `.js';
+var chai = require('chair').should();
 
-describe('` + argument + ` tests', function() {
-	/**
-	 * @see https://jasmine.github.io/api/edge/matchers.html
-	 */
+import ` + camelCase(feature) + ` from '../../src/js/` + folder + '/' + feature + `.js';
+
+describe('` + folder[0].toUpperCase() + folder.substring(1) + `', function() {
+\tdescribe('` + camelCase(feature) +  `', function() {
+\t\t'foo'.` + camelCase(feature) + `().should.exist(true);
+\t});
 });
 `;
 
-fs.writeFileSync('./spec/' + argument + '.spec.js', code, function(error) {
+fs.writeFileSync('./test/' + folder + '/' + feature + '.test.js', code, function(error) {
 	if( error ) {
-		throw 'Could not create the file spec/' + argument + '.js, only src/js/' + argument + '.js have been created, command canceled.'
+		throw 'Could not create the file test/' + folder + '/' + feature + '.js, only src/js/' + folder + '/' + feature + '.js have been created, command canceled.'
 	}
 });
 
-console.log('spec/' + argument + '.js spec created.');
+console.log('test/' + folder + '/' + feature + '.js test created.');
 
 console.log('end of the command.');
