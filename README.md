@@ -212,7 +212,7 @@ String.prototype.ellipsis = function(Object): String
 
 Returns true if the string is empty, else returns false.
 
-```javasript
+```javascript
 String.prototype.empty = function(): Boolean
 ```
 
