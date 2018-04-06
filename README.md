@@ -1,7 +1,7 @@
 # Prototype Storm
 
 ![Version](https://img.shields.io/badge/version-dev-orange.svg)
-![Build](https://www.codeship.io/projects/284613/status?branch=master) 
+![Build](https://img.shields.io/codeship/f4573ce0-1bfe-0136-c362-76579b4514e0.svg) 
 
 Supercharge your JavaScript!
 
