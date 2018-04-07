@@ -1,6 +1,6 @@
 'use strict';
 
-import nl2br from '../../src/js/nl2br.js';
+import nl2br from '../../src/js/string/nl2br.js';
 
 describe('nl2br String prototype', () => {
   it('should return a string with break line from a string containing new lines', () => {

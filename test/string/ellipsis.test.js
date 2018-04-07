@@ -1,6 +1,6 @@
 'use strict';
 
-import ellipsis from '../../src/js/ellipsis.js';
+import ellipsis from '../../src/js/string/ellipsis.js';
 
 describe('ellipsis String prototype', () => {
   it('should return the string ellipsized', () => {

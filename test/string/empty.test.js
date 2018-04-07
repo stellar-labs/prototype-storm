@@ -1,6 +1,6 @@
 'use strict';
 
-import empty from '../../src/js/empty.js';
+import empty from '../../src/js/string/empty.js';
 
 describe('empty String prototype', () => {
   it('should return true when string is empty', () => {
