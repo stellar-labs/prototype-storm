@@ -219,7 +219,9 @@ HomeWelcome to my website!
 - String
   - [`ellipsis`](#ellipsis)
   - [`empty`](#empty)
+  - [`format`](#format)
   - [`nl2br`](#nl2br)
+  - [`replaceAll`](#replaceall)
   - [`shuffle`](#shuffle)
   - [`stripTags`](#stripTags)
 
@@ -250,6 +252,28 @@ String.prototype.empty = function(): Boolean
 
 ---
 
+### `format`
+
+Returns the text and replace the placeholder of your choice by the associated value.
+
+```javascript
+String.prototype.format = function(Object): String
+```
+
+**Options**
+
+Key/value pairs.
+
+**Note**
+
+It replaces all the occurences of your placeholders.
+
+**The following prototypes will also be available**
+
+- [`replaceAll`](#replaceall)
+
+---
+
 ### `nl2br`
 
 Returns the string and replace the line returns (like `\n`) by html return line `<br />` tag.
@@ -263,6 +287,23 @@ String.prototype.nl2br = function(Object): String
 | property | type    | required | default | possible values | description |
 |----------|---------|----------|---------|-----------------|-------------|
 | strict   | boolean | no       | false   |                 |             |
+
+---
+
+### `replaceAll`
+
+Returns the string and replace all the occurences of a placeholder by its given value.
+
+```javascript
+String.prototype.replaceAll = function(Object): String
+```
+
+**Options**
+
+| property | type   | required | default | possible values | description |
+|----------|--------|----------|---------|-----------------|-------------|
+| old      | string | yes      |         |                 |             |
+| new      | string | yes      |         |                 |             |
 
 ---
 
