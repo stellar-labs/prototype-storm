@@ -55,6 +55,8 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ## Examples of uses
 
+- Array
+  - [Using `only`](#only)
 - String
   - [Using `ellipsis`](#using-ellipsis)
   - [Using `empty`](#using-empty)
@@ -63,6 +65,23 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `replaceAll`](#using-replaceall)
   - [Using `shuffle`](#using-shuffle)
   - [Using `stripTags`](#using-striptags)
+
+### Using `array`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-only.min.js
+```
+
+```javascript
+var languages = ['php', 'nodejs', 'python', 'ruby'];
+
+console.log( languages.only({ items: ['nodejs'] }) );
+```
+Will display
+
+```
+['nodejs']
+```
 
 ### Using `ellipsis`
 
@@ -216,6 +235,8 @@ HomeWelcome to my website!
 
 ## Methods definitions
 
+- Array
+  - [`only`](#only)
 - String
   - [`ellipsis`](#ellipsis)
   - [`empty`](#empty)
@@ -224,6 +245,23 @@ HomeWelcome to my website!
   - [`replaceAll`](#replaceall)
   - [`shuffle`](#shuffle)
   - [`stripTags`](#stripTags)
+
+### `only`
+
+Return an array filter from the values your choose.
+
+```
+Array.prototype.only = function(Object); Array
+```
+
+**Options**
+
+
+| property | type   | required | default | possible values | description |
+|----------|--------|----------|---------|-----------------|-------------|
+| new      | string | yes      |         |                 |             |
+
+---
 
 ### `ellipsis`
 
