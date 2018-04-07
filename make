@@ -40,7 +40,7 @@ if( '` + feature + `' in String.prototype === false ) {
 \t};
 }
 
-export default String.prototype.` + feature + `;
+export default String.prototype.` + camelCase(feature) + `;
 `;
 
 fs.writeFileSync('./src/js/' + folder + '/' + feature + '.js', code, 'utf8', function(error) {
@@ -53,7 +53,7 @@ console.log('src/js/' + folder + '/' + feature + '.js prototype created.');
 
 code = `'use strict'
 
-require('chai').should();
+var should = require('chai').should();
 
 import ` + camelCase(feature) + ` from '../../src/js/` + folder + '/' + feature + `.js';
 
@@ -69,7 +69,7 @@ describe('` + folder[0].toUpperCase() + folder.substring(1) + `', function() {
 
 fs.writeFileSync('./test/' + folder + '/' + feature + '.test.js', code, function(error) {
 	if( error ) {
-		throw 'Could not create the file test/' + folder + '/' + feature + '.js, only src/js/' + folder + '/' + feature + '.js have been created, command canceled.'
+		throw 'Could not create the file test/' + folder + '/' + feature + '.test.js, only src/js/' + folder + '/' + feature + '.js have been created, command canceled.'
 	}
 });
 
