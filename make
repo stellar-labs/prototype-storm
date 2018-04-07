@@ -39,7 +39,7 @@ if( file_exists === true ) {
 var code = `'use strict'
 
 if( '` + feature + `' in ` + ucfirst(folder) + `.prototype === false ) {
-\tString.prototype.`+ camelCase(feature) + ` = function() {
+\t` + ucfirst(folder) + `.prototype.`+ camelCase(feature) + ` = function() {
 \t\t// have fun!
 \t};
 }
