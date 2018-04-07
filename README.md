@@ -58,7 +58,9 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 - String
   - [Using `ellipsis`](#using-ellipsis)
   - [Using `empty`](#using-empty)
+  - [Using `format`](#using-format)
   - [Using `nl2br`](#using-nl2br)
+  - [Using `replaceAll`](#using-replaceall)
   - [Using `shuffle`](#using-shuffle)
   - [Using `stripTags`](#using-striptags)
 
@@ -110,6 +112,30 @@ true
 false
 ```
 
+### Using `format`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-format.min.js
+```
+
+```javascript
+var text1 = 'Hi {name}, welcome to the {page} page.';
+var text2 = '<h1>{page}</h1><p>Hi {name}, welcome to the {page} page</p>';
+var text3 = 'The nature is a book, and we are burning its pages instead of reading them.';
+
+console.log( text1.format({ name: 'John', page: 'home' }) );
+console.log( text2.format({ name: 'Frank', page: 'Configuration' }) );
+console.log( text3.format() );
+```
+
+Will display:
+
+```
+Hi John, welcome to the home page.
+<h1>Configuration</h1><p>Hi Frank, welcome to the Configuration page</p>
+The nature is a book, and we are burning its pages instead of reading them.
+```
+
 ### Using `nl2br`
 
 ```
@@ -129,6 +155,27 @@ Will display:
 ```
 Hi<br><br>Welcome to my website!
 Hi<br/>How are you?
+```
+
+### Using `replaceAll`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-replace-all.min.js
+```
+
+```javascript
+var text = '<brand> model S are the most awesome car of <brand>!';
+var brand = 'Tesla';
+
+console.log( text.replace('<brand>', brand) );
+console.log( text.replaceAll({ old: '<brand>', new: brand }) );
+```
+
+Will display:
+
+```
+Tesla model S are the most awesome car of <brand>!
+Tesla model S are the most awesome car of Tesla!
 ```
 
 ### Using `shuffle`
