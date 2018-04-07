@@ -250,7 +250,7 @@ HomeWelcome to my website!
 
 Return an array filter from the values your choose.
 
-```
+```javascript
 Array.prototype.only = function(Object): Array
 ```
 
