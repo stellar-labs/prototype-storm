@@ -186,10 +186,10 @@ String.prototype.ellipsis = function(Object): String
 
 **Options**
 
-| property | type    | required | default |
-|----------|---------|----------|---------|
-| max      | integer | yes      |         |
-| end      | string  | no       | ...     |
+| property | type    | required | default | possible values | description |
+|----------|---------|----------|---------|-----------------|-------------|
+| max      | integer | yes      |         |                 |             |
+| end      | string  | no       | ...     |                 |             |
 
 ---
 
@@ -213,9 +213,9 @@ String.prototype.nl2br = function(Object): String
 
 **Options**
 
-| property | type    | required | default |
-|----------|---------|----------|---------|
-| strict   | boolean | no       | false   |
+| property | type    | required | default | possible values | description |
+|----------|---------|----------|---------|-----------------|-------------|
+| strict   | boolean | no       | false   |                 |             |
 
 ---
 
