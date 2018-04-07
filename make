@@ -7,6 +7,10 @@ function camelCase(str) {
 	return str.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
 }
 
+function ucfirst(str) {
+	return str[0].toUpperCase() + str.substring(1);
+}
+
 const argument_count = process.argv.length;
 
 // Checks if the argument count is correct
@@ -34,13 +38,13 @@ if( file_exists === true ) {
 // Create the file 
 var code = `'use strict'
 
-if( '` + feature + `' in String.prototype === false ) {
+if( '` + feature + `' in ` + ucfirst(folder) + `.prototype === false ) {
 \tString.prototype.`+ camelCase(feature) + ` = function() {
 \t\t// have fun!
 \t};
 }
 
-export default String.prototype.` + camelCase(feature) + `;
+export default ` + ucfirst(folder) + `.prototype.` + camelCase(feature) + `;
 `;
 
 fs.writeFileSync('./src/js/' + folder + '/' + feature + '.js', code, 'utf8', function(error) {
@@ -57,7 +61,7 @@ var should = require('chai').should();
 
 import ` + camelCase(feature) + ` from '../../src/js/` + folder + '/' + feature + `.js';
 
-describe('` + folder[0].toUpperCase() + folder.substring(1) + `', function() {
+describe('` + ucfirst(folder) + `', function() {
 \tdescribe('` + camelCase(feature) +  `', function() {
 \t\t// Put your "it('...')" tests here, have fun!
 \t\tit('should exists', function() {
