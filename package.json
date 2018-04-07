@@ -18,8 +18,8 @@
     "jasmine:test": "babel-node spec/run.js",
     "build": "webpack --env.production",
     "make:feature": "node make",
-    "test:for": "mocha --require js:babel-core/register",
-    "test:string": "mocha --require js:babel-core/register test/string",
+    "test:for": "mocha --require babel-core/register",
+    "test:string": "mocha --require babel-core/register test/string",
     "test:all": "yarn test:string"
   },
   "dependencies": {}
