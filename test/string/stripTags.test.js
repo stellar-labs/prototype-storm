@@ -1,9 +1,11 @@
 'use strict';
 
+require('chai').should();
+
 import stripTags from '../../src/js/string/stripTags.js';
 
 describe('stripTags String prototype', () => {
   it('should return the string without html tags', () => {
-    expect('<li><a href="/home.html">Home Page</a></li>'.stripTags()).toBe('Home Page');
+    '<li><a href="/home.html">Home Page</a></li>'.stripTags().should.equal('Home Page');
   });
 });
