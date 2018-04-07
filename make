@@ -15,7 +15,7 @@ const argument_count = process.argv.length;
 
 // Checks if the argument count is correct
 if( argument_count !== 4 ) {
-	throw 'make usage: npm make <type> <feature> (example: npm make string begins-with';
+	throw 'make usage: npm make <type> <feature> (example: npm make string begins-with)';
 }
 
 const folder = process.argv[2];
