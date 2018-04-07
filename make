@@ -53,7 +53,7 @@ console.log('src/js/' + folder + '/' + feature + '.js prototype created.');
 
 code = `'use strict'
 
-var chai = require('chair').should();
+require('chair').should();
 
 import ` + camelCase(feature) + ` from '../../src/js/` + folder + '/' + feature + `.js';
 
