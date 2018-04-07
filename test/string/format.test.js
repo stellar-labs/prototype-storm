@@ -1,6 +1,6 @@
 'use strict'
 
-require('chai').should();
+var should = require('chai').should();
 
 import format from '../../src/js/string/format.js';
 

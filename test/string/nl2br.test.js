@@ -1,6 +1,6 @@
 'use strict';
 
-require('chai').should();
+var should = require('chai').should();
 
 import nl2br from '../../src/js/string/nl2br.js';
 

@@ -1,6 +1,6 @@
 'use strict';
 
-require('chai').should();
+var should = require('chai').should();
 
 import shuffle from '../../src/js/string/shuffle.js';
 

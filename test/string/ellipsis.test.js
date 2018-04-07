@@ -1,6 +1,6 @@
 'use strict';
 
-require('chai').should();
+var should = require('chai').should();
 
 import ellipsis from '../../src/js/string/ellipsis.js';
 

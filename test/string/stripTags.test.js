@@ -1,6 +1,6 @@
 'use strict';
 
-require('chai').should();
+var should = require('chai').should();
 
 import stripTags from '../../src/js/string/stripTags.js';
 
