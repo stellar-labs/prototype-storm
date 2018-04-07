@@ -1,6 +1,6 @@
 'use strict';
 
-import stripTags from '../src/js/stripTags.js';
+import stripTags from '../../src/js/stripTags.js';
 
 describe('stripTags String prototype', () => {
   it('should return the string without html tags', () => {
