@@ -186,8 +186,10 @@ String.prototype.ellipsis = function(Object): String
 
 **Options**
 
-- `max`: required, integer, no default - Set the maximum of character
-- `end`: optional, string, default `...` - Set the ending string
+| property | type    | required | default |
+|----------|---------|----------|---------|
+| max      | integer | yes      |         |
+| end      | string  | no       | ...     |
 
 ### `empty`
 
@@ -207,7 +209,9 @@ String.prototype.nl2br = function(Object): String
 
 **Options**
 
-- `strict`: optional, boolean, default `false`: if true, it replace the return lines with XHTML compatible `<br />` tag instead of `<br>`
+| property | type    | required | default |
+|----------|---------|----------|---------|
+| strict   | boolean | no       | false   |
 
 ### `shuffle`
 
