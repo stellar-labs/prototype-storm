@@ -251,7 +251,7 @@ HomeWelcome to my website!
 Return an array filter from the values your choose.
 
 ```
-Array.prototype.only = function(Object); Array
+Array.prototype.only = function(Object): Array
 ```
 
 **Options**
