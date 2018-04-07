@@ -19,7 +19,8 @@
     "build": "webpack --env.production",
     "make": "node make",
     "test": "mocha --compilers js:babel-core/register",
-    "test:string": "mocha --compilers js:babel-core/register test/string"
+    "test:string": "mocha --compilers js:babel-core/register test/string",
+    "test:all": "yarn test:string"
   },
   "dependencies": {}
 }
