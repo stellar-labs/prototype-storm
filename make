@@ -59,7 +59,10 @@ import ` + camelCase(feature) + ` from '../../src/js/` + folder + '/' + feature 
 
 describe('` + folder[0].toUpperCase() + folder.substring(1) + `', function() {
 \tdescribe('` + camelCase(feature) +  `', function() {
-\t\t'foo'.` + camelCase(feature) + `().should.exist(true);
+\t\t// Put your "it('...')" tests here, have fun!
+\t\tit('should exists', function() {
+\t\t\t'foo'.` + camelCase(feature) + `().should.exist(true);
+\t\t});
 \t});
 });
 `;
