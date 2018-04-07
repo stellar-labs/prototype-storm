@@ -73,6 +73,6 @@ fs.writeFileSync('./test/' + folder + '/' + feature + '.test.js', code, function
 	}
 });
 
-console.log('test/' + folder + '/' + feature + '.js test created.');
+console.log('test/' + folder + '/' + feature + '.test.js test created.');
 
 console.log('end of the command.');
