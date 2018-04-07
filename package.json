@@ -20,7 +20,7 @@
     "make:feature": "node make",
     "test:for": "mocha --require babel-core/register",
     "test:string": "mocha --require babel-core/register test/string",
-    "test:all": "yarn test:string"
+    "test:all": "mocha --require babel-core/register test/string"
   },
   "dependencies": {}
 }
