@@ -191,6 +191,8 @@ String.prototype.ellipsis = function(Object): String
 | max      | integer | yes      |         |
 | end      | string  | no       | ...     |
 
+---
+
 ### `empty`
 
 Returns true if the string is empty, else returns false.
@@ -198,6 +200,8 @@ Returns true if the string is empty, else returns false.
 ```javascript
 String.prototype.empty = function(): Boolean
 ```
+
+---
 
 ### `nl2br`
 
@@ -213,6 +217,8 @@ String.prototype.nl2br = function(Object): String
 |----------|---------|----------|---------|
 | strict   | boolean | no       | false   |
 
+---
+
 ### `shuffle`
 
 Return a randomized version of the string.
@@ -220,6 +226,8 @@ Return a randomized version of the string.
 ```javascript
 String.prototype.shuffle = function(): String
 ```
+
+---
 
 ### `stripTags`
 
