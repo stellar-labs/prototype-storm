@@ -1,10 +1,13 @@
-'use strict'
-import empty from '../src/js/empty.js'
+'use strict';
+
+import empty from '../../src/js/empty.js';
+
 describe('empty String prototype', () => {
   it('should return true when string is empty', () => {
-    expect(''.empty()).toBe(true)
-  })
+    expect(''.empty()).toBe(true);
+  });
+
   it('should return false when the string is not empty', () => {
-    expect('Hello world!'.empty()).toBe(false)
-  })
-})
+    expect('Hello world!'.empty()).toBe(false);
+  });
+});
