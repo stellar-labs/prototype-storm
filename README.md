@@ -305,6 +305,10 @@ String.prototype.replaceAll = function(Object): String
 | old      | string | yes      |         |                 |             |
 | new      | string | yes      |         |                 |             |
 
+**The following prototypes include this one**
+
+- [`format`](#format)
+
 ---
 
 ### `shuffle`
