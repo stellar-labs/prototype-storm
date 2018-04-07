@@ -259,7 +259,7 @@ Array.prototype.only = function(Object); Array
 
 | property | type   | required | default | possible values | description |
 |----------|--------|----------|---------|-----------------|-------------|
-| new      | string | yes      |         |                 |             |
+| items    | string | yes      |         |                 |             |
 
 ---
 
