@@ -10,7 +10,7 @@ if( 'to-kebab-case' in String.prototype === false ) {
 		  
 		string = string.replace(/[a-z][A-Z]/g, function(match, index) {
 		  	return match[0] + '-' + match[1];
-		});
+		}).replace(/(^-*)|(-*$)/g, '').replace(/-{2,}/g, '-');
 		  
 		return string.toLowerCase();
 	};

@@ -39,5 +39,13 @@ describe('String', function() {
 		it('should convert camel case with non ascii', function() {
 			'camelFrançaisCase'.toKebabCase().should.equal('camel-francais-case');
 		});
+
+		it('should remove trailing dashes if there is specials characters around the string', function() {
+			'!*-Hello world!!^^'.toKebabCase().should.equal('hello-world');
+		});
+
+		it('should remove dashes if there are more than one special characters in the middle', function() {
+			'!*-Hello --""*world'.toKebabCase().should.equal('hello-world');
+		});
 	});
 });
