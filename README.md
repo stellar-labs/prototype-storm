@@ -70,7 +70,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `toAscii`](#using-toascii)
   - [Using `toKebabCase`](#using-tokebabcase)
 
-### Using `array`
+### Using `only`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-only.min.js
