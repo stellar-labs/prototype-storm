@@ -1,4 +1,3 @@
 *
 !.gitignore
-!string
-!array
+!*.js
