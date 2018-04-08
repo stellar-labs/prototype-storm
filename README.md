@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)
 ![Build](https://img.shields.io/codeship/f4573ce0-1bfe-0136-c362-76579b4514e0.svg) 
-[![Up-to-date dependencies status](https://david-dm.org/stellar-labs/prototype-storm?type=dev)](https://david-dm.org/stellar-labs/prototype-storm.svg)
+[![devDependencies Status](https://david-dm.org/stellar-labs/prototype-storm/dev-status.svg)](https://david-dm.org/stellar-labs/prototype-storm?type=dev)
 [![Known Vulnerabilities](https://snyk.io/test/github/stellar-labs/prototype-storm/badge.svg)](https://snyk.io/test/github/stellar-labs/prototype-storm)
 
 Supercharge your JavaScript!
