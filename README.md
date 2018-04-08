@@ -68,6 +68,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `shuffle`](#using-shuffle)
   - [Using `stripTags`](#using-striptags)
   - [Using `toAscii`](#using-toascii)
+  - [Using `toKebabCase`](#using-tokebabcase)
 
 ### Using `array`
 
@@ -257,6 +258,30 @@ Hello world, my string is unicode free
 Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
 ```
 
+### Using `toKebabCase`
+
+```javascript
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-kebab-case.min.js
+```
+
+```javascript
+var text1 = 'Hello world';
+var text2 = 'snake_case';
+var text3 = "Français à l'accent";
+
+console.log( text1.toKebabCase() );
+console.log( text2.toKebabCase() );
+console.log( text3.toKebabCase() );
+```
+
+Will display:
+
+```
+hello-world
+snake-case
+francais-a-l-accent
+```
+
 ## Methods definitions
 
 - Array
@@ -270,6 +295,7 @@ Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
   - [`shuffle`](#shuffle)
   - [`stripTags`](#stripTags)
   - [`toAscii`](#toascii)
+  - [`toKebabCase`](#tokebabcase)
 
 ### `only`
 
@@ -368,7 +394,7 @@ String.prototype.replaceAll = function(Object): String
 | old      | string | yes      |         |                 |             |
 | new      | string | yes      |         |                 |             |
 
-**The following prototypes include this one**
+**The following prototypes depend on this one**
 
 - [`format`](#format)
 
@@ -401,3 +427,25 @@ Turn any non-ascii **letters** inside a string to its ascii counterpart and retu
 ```javascript
 String.prototype.toAscii = function(): String
 ```
+
+**The following prototypes depend on this one**
+
+- [`toKebabCase`](#tokebabcase)
+
+---
+
+### `toKebabCase`
+
+Turn any string to kebab-case (dashes separating words).
+
+```javascript
+String.prototype.toKebabCase = function(): String
+```
+
+**The following prototypes will also be available**
+
+- [`toAscii`](#toascii)
+
+**Note**
+
+Any non ascii characters will be converted to its ascii counterpart.
