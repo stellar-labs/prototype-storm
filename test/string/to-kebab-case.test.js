@@ -47,5 +47,9 @@ describe('String', function() {
 		it('should remove dashes if there are more than one special characters in the middle', function() {
 			'!*-Hello --""*world'.toKebabCase().should.equal('hello-world');
 		});
+
+		it('should not remove numbers', function() {
+			'New dual motor P100 D with 100 mph in seconds'.toKebabCase().should.equal('new-dual-motor-p100-d-with-100-mph-in-seconds');
+		});
 	});
 });

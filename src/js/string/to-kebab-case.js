@@ -6,7 +6,7 @@ if( 'to-kebab-case' in String.prototype === false ) {
 	String.prototype.toKebabCase = function() {
 		let string = this;
   
-		string = string.toAscii().replace(/[^a-z]/gi, '-');
+		string = string.toAscii().replace(/[^a-z0-9]/gi, '-');
 		  
 		string = string.replace(/[a-z][A-Z]/g, function(match, index) {
 		  	return match[0] + '-' + match[1];
