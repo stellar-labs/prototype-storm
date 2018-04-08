@@ -67,6 +67,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `replaceAll`](#using-replaceall)
   - [Using `shuffle`](#using-shuffle)
   - [Using `stripTags`](#using-striptags)
+  - [Using `toAscii`](#using-toascii)
 
 ### Using `array`
 
@@ -235,6 +236,27 @@ Will display:
 HomeWelcome to my website!
 ```
 
+### Using `toAscii`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-ascii.min.js
+```
+
+```javascript
+var text1 = 'Hello world, my string is unicode free';
+var text2 = 'Voix ambiguë d'un cœur qui, à l'arrivée du zéphyr, préfère les jattes de kiwis.';
+
+console.log( text1.toAscii() );
+console.log( text2.toAscii() );
+```
+
+Will display:
+
+```
+Hello world, my string is unicode free
+Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
+```
+
 ## Methods definitions
 
 - Array
@@ -247,6 +269,7 @@ HomeWelcome to my website!
   - [`replaceAll`](#replaceall)
   - [`shuffle`](#shuffle)
   - [`stripTags`](#stripTags)
+  - [`toAscii`](#toascii)
 
 ### `only`
 
@@ -367,4 +390,14 @@ Returns the string and remove all the html tags inside of it.
 
 ```javascript
 String.prototype.stripTags = function(): String
+```
+
+--- 
+
+### `toAscii`
+
+Turn any non-ascii **letters** inside a string to its ascii counterpart and return the new string.
+
+```javascript
+String.prototype.toAscii = function(): String
 ```
