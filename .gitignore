@@ -2,6 +2,7 @@
 !.gitignore
 !spec
 !src
+!test
 !.babelrc
 !package.json
 !README.md
