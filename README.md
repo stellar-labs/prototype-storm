@@ -279,7 +279,19 @@ Will display:
 ```
 hello-world
 snake-case
-francais-a-l-accent
+français-à-l-accent
+```
+
+**Tips**
+
+Turn this prototype to make slugs by adding [`.toAscii`](#using-toascii) before calling this prototype:
+
+```javascript
+var text1 = 'spring/summer 2018';
+var text2 = 'printemps/été 2018';
+
+var slug1 = text.toAscii().toKebabCase(); // spring-summer-2018
+var slug2 = text.toAscii().toKebabCase(); // printemps-ete-2018
 ```
 
 ## Methods definitions
@@ -428,10 +440,6 @@ Turn any non-ascii **letters** inside a string to its ascii counterpart and retu
 String.prototype.toAscii = function(): String
 ```
 
-**The following prototypes depend on this one**
-
-- [`toKebabCase`](#tokebabcase)
-
 ---
 
 ### `toKebabCase`
@@ -441,11 +449,3 @@ Turn any string to kebab-case (dashes separating words).
 ```javascript
 String.prototype.toKebabCase = function(): String
 ```
-
-**The following prototypes will also be available**
-
-- [`toAscii`](#toascii)
-
-**Note**
-
-Any non ascii characters will be converted to its ascii counterpart.
