@@ -69,6 +69,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `stripTags`](#using-striptags)
   - [Using `toAscii`](#using-toascii)
   - [Using `toKebabCase`](#using-tokebabcase)
+  - [Using `toSnakeCase`](#using-tosnakecase)
 
 ### Using `only`
 
@@ -302,6 +303,27 @@ var slug1 = text.toAscii().toKebabCase(); // spring-summer-2018
 var slug2 = text.toAscii().toKebabCase(); // printemps-ete-2018
 ```
 
+### Using `toSnakeCase`
+
+**WARNING**
+
+This method do not support the Asian alphabet.
+
+```javascript
+var text1 = 'Belle journée le monde';
+var text2 = 'Hey, but you was a PHP web dev all the time !!';
+
+console.log( text1.toSnakeCase() );
+console.log( text2.toSnakeCase() );
+```
+
+Will display:
+
+```
+belle_journée_le_monde
+hey_but_you_was_a_php_web_dev_all_the_time
+```
+
 ## Methods definitions
 
 - Array
@@ -316,6 +338,7 @@ var slug2 = text.toAscii().toKebabCase(); // printemps-ete-2018
   - [`stripTags`](#stripTags)
   - [`toAscii`](#toascii)
   - [`toKebabCase`](#tokebabcase)
+  - [`toSnakeCase`](#toSnakeCase)
 
 ### `only`
 
@@ -464,4 +487,17 @@ Turn any string to kebab-case (dashes separating words).
 
 ```javascript
 String.prototype.toKebabCase = function(): String
+```
+---
+
+### `toSnakeCase`
+
+**WARNING**
+
+This method do not support the Asian alphabet.
+
+Turn any string to snake_case (underscores separated words).
+
+```javascript
+String.prototype.toSnakeCase = function(): String
 ```
