@@ -13,7 +13,7 @@ describe('String', function() {
 		});
 
 		it('should convert kebab case with unicode to ascii', function() {
-			'éy-this-is-français-wtf'.toKebabCase().should.equal('ey-this-is-francais-wtf');
+			'éy-this-is-français-wtf'.toKebabCase().should.equal('éy-this-is-français-wtf');
 		});
 
 		it('should convert pascal case', function() {
@@ -21,7 +21,7 @@ describe('String', function() {
 		});
 
 		it('should convert pascal case with non ascii', function() {
-			'PascalFrançaisCase'.toKebabCase().should.equal('pascal-francais-case');
+			'PascalFrançaisCase'.toKebabCase().should.equal('pascal-français-case');
 		});
 
 		it('should convert snake case', function() {
@@ -29,7 +29,7 @@ describe('String', function() {
 		});
 
 		it('should convert snake case with non ascii', function() {
-			'snake_français_case'.toKebabCase().should.equal('snake-francais-case');
+			'snake_français_case'.toKebabCase().should.equal('snake-français-case');
 		});
 
 		it('should convert camel case', function() {
@@ -37,7 +37,7 @@ describe('String', function() {
 		});
 
 		it('should convert camel case with non ascii', function() {
-			'camelFrançaisCase'.toKebabCase().should.equal('camel-francais-case');
+			'camelFrançaisCase'.toKebabCase().should.equal('camel-français-case');
 		});
 
 		it('should remove trailing dashes if there is specials characters around the string', function() {
