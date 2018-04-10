@@ -239,6 +239,10 @@ HomeWelcome to my website!
 
 ### Using `toAscii`
 
+**WARNING**
+
+This method do not support the Asian alphabet
+
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-ascii.min.js
 ```
@@ -259,6 +263,10 @@ Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
 ```
 
 ### Using `toKebabCase`
+
+**WARNING**
+
+This method do not support the Asian alphabet.
 
 ```javascript
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-kebab-case.min.js
@@ -434,6 +442,10 @@ String.prototype.stripTags = function(): String
 
 ### `toAscii`
 
+**WARNING**
+
+This method do not support the Asian alphabet.
+
 Turn any non-ascii **letters** inside a string to its ascii counterpart and return the new string.
 
 ```javascript
@@ -443,6 +455,10 @@ String.prototype.toAscii = function(): String
 ---
 
 ### `toKebabCase`
+
+**WARNING**
+
+This method do not support the Asian alphabet.
 
 Turn any string to kebab-case (dashes separating words).
 
