@@ -240,8 +240,6 @@ HomeWelcome to my website!
 
 ### Using `toAscii`
 
-**WARNING**
-
 This method do not support the Asian alphabet
 
 ```
@@ -264,8 +262,6 @@ Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
 ```
 
 ### Using `toKebabCase`
-
-**WARNING**
 
 This method do not support the Asian alphabet.
 
@@ -304,8 +300,6 @@ var slug2 = text.toAscii().toKebabCase(); // printemps-ete-2018
 ```
 
 ### Using `toSnakeCase`
-
-**WARNING**
 
 This method do not support the Asian alphabet.
 
@@ -465,8 +459,6 @@ String.prototype.stripTags = function(): String
 
 ### `toAscii`
 
-**WARNING**
-
 This method do not support the Asian alphabet.
 
 Turn any non-ascii **letters** inside a string to its ascii counterpart and return the new string.
@@ -479,8 +471,6 @@ String.prototype.toAscii = function(): String
 
 ### `toKebabCase`
 
-**WARNING**
-
 This method do not support the Asian alphabet.
 
 Turn any string to kebab-case (dashes separating words).
@@ -491,8 +481,6 @@ String.prototype.toKebabCase = function(): String
 ---
 
 ### `toSnakeCase`
-
-**WARNING**
 
 This method do not support the Asian alphabet.
 
