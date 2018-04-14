@@ -97,7 +97,7 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 ```
 
 ```javascript
-var catch_all_letters = '/[^' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
+var catch_all_letters = '/[' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
 ```
 
 ### Using `ellipsis`
@@ -350,7 +350,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 
 ### `only`
 
-Return an array filter from the values your choose.
+Return an array filtered from the values your provided.
 
 ```javascript
 Array.prototype.only = function(Object): Array
