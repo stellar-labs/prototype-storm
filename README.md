@@ -361,7 +361,7 @@ Array.prototype.only = function(Object): Array
 
 | property | type   | required | default | possible values | description |
 |----------|--------|----------|---------|-----------------|-------------|
-| items    | string | yes      |         |                 |             |
+| items    | Array  | yes      |         |                 |             |
 
 ---
 
