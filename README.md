@@ -59,6 +59,8 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 - Array
   - [Using `only`](#only)
+- RegExp
+  - [Using constant `LETTERS`](#using-constant-letters)
 - String
   - [Using `ellipsis`](#using-ellipsis)
   - [Using `empty`](#using-empty)
@@ -86,6 +88,16 @@ Will display
 
 ```
 ['nodejs']
+```
+
+### Using constant `LETTERS`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-letters.min.js
+```
+
+```javascript
+var catch_all_letters = '/[^' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
 ```
 
 ### Using `ellipsis`
@@ -322,6 +334,8 @@ hey_but_you_was_a_php_web_dev_all_the_time
 
 - Array
   - [`only`](#only)
+- RegExp
+  - [`LETTERS`](#letters)
 - String
   - [`ellipsis`](#ellipsis)
   - [`empty`](#empty)
@@ -348,6 +362,16 @@ Array.prototype.only = function(Object): Array
 | property | type   | required | default | possible values | description |
 |----------|--------|----------|---------|-----------------|-------------|
 | items    | string | yes      |         |                 |             |
+
+---
+
+### `LETTERS`
+
+Return the regexp helpers that catches any unicode letters.
+
+```javascript
+RegExp.LETTERS = String
+```
 
 ---
 
