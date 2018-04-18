@@ -105,13 +105,12 @@ var catch_all_letters = '/[' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
 ### Using constant `LOWERCASES`
 
 ```
-https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-letters.min.js
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-lowercases.min.js
 ```
 
 ```javascript
 var catch_all_lowercases = new RegExp('[' + RegExp.LOWERCASES + ']', 'g');
 ```
-
 
 ### Using `ellipsis`
 
