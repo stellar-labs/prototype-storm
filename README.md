@@ -397,6 +397,10 @@ Return the regexp that catches any unicode letters.
 RegExp.LETTERS = String
 ```
 
+**Warning**
+
+UTF-16 characters are not supported.
+
 ---
 
 ### `LOWERCASES`
