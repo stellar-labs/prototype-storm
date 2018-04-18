@@ -390,7 +390,7 @@ Array.prototype.only = function(Object): Array
 
 ### `LETTERS`
 
-Return the regexp helpers that catches any unicode letters.
+Return the regexp that catches any unicode letters.
 
 ```javascript
 RegExp.LETTERS = String
