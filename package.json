@@ -14,8 +14,6 @@
     "webpack-cli": "^2.0.14"
   },
   "scripts": {
-    "jasmine:init": "jasmine init",
-    "jasmine:test": "babel-node spec/run.js",
     "build": "webpack --env.production",
     "make:feature": "node make",
     "test:for": "mocha --require babel-core/register",
