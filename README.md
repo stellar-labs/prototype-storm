@@ -423,6 +423,10 @@ Return the regexp that catches any unicode uppercase letters.
 RegExp.UPPERCASES = String;
 ```
 
+**Warning**
+
+UTF-16 characters are not supported.
+
 ---
 
 ### `ellipsis`
