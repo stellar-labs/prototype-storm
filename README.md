@@ -93,7 +93,7 @@ Will display
 ['nodejs']
 ```
 
-### Using `suù`
+### Using `sum`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-sum.min.js
