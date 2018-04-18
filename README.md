@@ -61,6 +61,8 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `only`](#only)
 - RegExp
   - [Using constant `LETTERS`](#using-constant-letters)
+  - [Using constant `LOWERCASES`](#using-constant-lowercases)
+  - [Using constant `UPPERCASES`](#using-constant-uppercases)
 - String
   - [Using `ellipsis`](#using-ellipsis)
   - [Using `empty`](#using-empty)
@@ -99,6 +101,17 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 ```javascript
 var catch_all_letters = '/[' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
 ```
+
+### Using constant `LOWERCASES`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-letters.min.js
+```
+
+```javascript
+var catch_all_lowercases = new RegExp('[' + RegExp.LOWERCASES + ']', 'g');
+```
+
 
 ### Using `ellipsis`
 
