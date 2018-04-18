@@ -381,6 +381,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 
 - Array
   - [`only`](#only)
+  - [`sum`](#sum)
 - RegExp
   - [`LETTERS`](#letters)
   - [`LOWERCASES`](#lowercases)
@@ -411,6 +412,16 @@ Array.prototype.only = function(Object): Array
 | property | type   | required | default | possible values | description |
 |----------|--------|----------|---------|-----------------|-------------|
 | items    | Array  | yes      |         |                 |             |
+
+---
+
+### `sum`
+
+Return the sum of all the items in an array.
+
+```javascript
+Array.prototype.sum = function(): Number
+```
 
 ---
 
