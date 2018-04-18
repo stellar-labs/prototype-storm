@@ -407,6 +407,10 @@ Return the regexp that catches any unicode lowercase letters.
 RegExp.LOWERCASES = String
 ```
 
+**Warning**
+
+UTF-16 characters are not supported.
+
 ---
 
 Return the regexp that catches any unicode uppercase letters.
