@@ -112,6 +112,16 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 var catch_all_lowercases = new RegExp('[' + RegExp.LOWERCASES + ']', 'g');
 ```
 
+### Using constant `UPPERCASES`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-uppercases.min.js
+```
+
+```javascript
+var catch_all_uppercases = new RegExp('[' + RegExp.UPPERCASES + ']', 'g');
+```
+
 ### Using `ellipsis`
 
 ```
