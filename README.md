@@ -358,6 +358,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`only`](#only)
 - RegExp
   - [`LETTERS`](#letters)
+  - [`LOWERCASES`](#lowercases)
 - String
   - [`ellipsis`](#ellipsis)
   - [`empty`](#empty)
@@ -393,6 +394,16 @@ Return the regexp helpers that catches any unicode letters.
 
 ```javascript
 RegExp.LETTERS = String
+```
+
+---
+
+### `LOWERCASES`
+
+Return the regexp that catches any unicode lowercase letters.
+
+```javascript
+RegExp.LOWERCASES = String
 ```
 
 ---
