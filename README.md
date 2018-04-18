@@ -59,6 +59,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 - Array
   - [Using `only`](#only)
+  - [Using `sum`](#sum)
 - RegExp
   - [Using constant `LETTERS`](#using-constant-letters)
   - [Using constant `LOWERCASES`](#using-constant-lowercases)
@@ -90,6 +91,30 @@ Will display
 
 ```
 ['nodejs']
+```
+
+### Using `suù`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-sum.min.js
+```
+
+```javascript
+var array1 = [1, 2, 3, 4];
+var array2 = [1, 2, 'three', 3, 4];
+var array3 = [1, 2, {}, 3, null, 4];
+
+console.log(array1.sum());
+console.log(array2.sum());
+console.log(array3.sum());
+```
+
+Will display:
+
+```
+10
+10
+10
 ```
 
 ### Using constant `LETTERS`
