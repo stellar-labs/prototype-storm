@@ -57,22 +57,25 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ## Examples of uses
 
-- [Using `Array.only`](#using-array-only)
-- [Using `Array.sum`](#using-array-sum)
-- [Using `Array.toConsole`](#using-array-toconsole)
-- [Using `RegExp.LETTERS`](#using-regexp-letters)
-- [Using `RegExp.LOWERCASES`](#using-regexp-lowercases)
-- [Using `RegExp.UPPERCASES`](#using-regexp-uppercases)
-- [Using `String.ellipsis`](#using-string-ellipsis)
-- [Using `String.empty`](#using-string-empty)
-- [Using `String.format`](#using-string-format)
-- [Using `String.nl2br`](#using-string-nl2br)
-- [Using `String.replaceAll`](#using-string-replaceall)
-- [Using `String.shuffle`](#using-string-shuffle)
-- [Using `String.stripTags`](#using-string-striptags)
-- [Using `String.toAscii`](#using-string-toascii)
-- [Using `String.toKebabCase`](#using-string-tokebabcase)
-- [Using `String.toSnakeCase`](#using-string-tosnakecase)
+- Array
+  - [Using `Array.only`](#using-arrayonly)
+  - [Using `Array.sum`](#using-arraysum)
+  - [Using `Array.toConsole`](#using-arraytoconsole)
+- RegExp
+  - [Using `RegExp.LETTERS`](#using-regexpletters)
+  - [Using `RegExp.LOWERCASES`](#using-regexplowercases)
+  - [Using `RegExp.UPPERCASES`](#using-regexpuppercases)
+- String  
+  - [Using `String.ellipsis`](#using-stringellipsis)
+  - [Using `String.empty`](#using-stringempty)
+  - [Using `String.format`](#using-stringformat)
+  - [Using `String.nl2br`](#using-stringnl2br)
+  - [Using `String.replaceAll`](#using-stringreplaceall)
+  - [Using `String.shuffle`](#using-stringshuffle)
+  - [Using `String.stripTags`](#using-stringstriptags)
+  - [Using `String.toAscii`](#using-stringtoascii)
+  - [Using `String.toKebabCase`](#using-stringtokebabcase)
+  - [Using `String.toSnakeCase`](#using-stringtosnakecase)
 
 ### Using `Array.only`
 
@@ -395,22 +398,25 @@ hey_but_you_was_a_php_web_dev_all_the_time
 
 ## Methods definitions
 
-- [`Array.only`](#array-only)
-- [`Array.sum`](#array-sum)
-- [`Array.toConsole`](#array-toconsole)
-- [`RegExp.LETTERS`](#regexp-letters)
-- [`RegExp.LOWERCASES`](#regexp-lowercases)
-- [`RegExp.UPPERCASES`](#regexp-uppercases)
-- [`String.ellipsis`](#string-ellipsis)
-- [`String.empty`](#string-empty)
-- [`String.format`](#string-format)
-- [`String.nl2br`](#string-nl2br)
-- [`String.replaceAll`](#string-replaceall)
-- [`String.shuffle`](#string-shuffle)
-- [`String.stripTags`](#string-stripTags)
-- [`String.toAscii`](#string-toascii)
-- [`String.toKebabCase`](#string-tokebabcase)
-- [`String.toSnakeCase`](#string-toSnakeCase)
+- Array
+  - [`Array.only`](#arrayonly)
+  - [`Array.sum`](#arraysum)
+  - [`Array.toConsole`](#arraytoconsole)
+- RegExp
+  - [`RegExp.LETTERS`](#regexpletters)
+  - [`RegExp.LOWERCASES`](#regexplowercases)
+  - [`RegExp.UPPERCASES`](#regexpuppercases)
+- String
+  - [`String.ellipsis`](#stringellipsis)
+  - [`String.empty`](#stringempty)
+  - [`String.format`](#stringformat)
+  - [`String.nl2br`](#stringnl2br)
+  - [`String.replaceAll`](#stringreplaceall)
+  - [`String.shuffle`](#stringshuffle)
+  - [`String.stripTags`](#stringstripTags)
+  - [`String.toAscii`](#stringtoascii)
+  - [`String.toKebabCase`](#stringtokebabcase)
+  - [`String.toSnakeCase`](#stringtoSnakeCase)
 
 ### `Array.only`
 
