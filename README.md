@@ -74,6 +74,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `String.shuffle`](#using-stringshuffle)
   - [Using `String.stripTags`](#using-stringstriptags)
   - [Using `String.toAscii`](#using-stringtoascii)
+  - [Using `String.toConsole`](#using-stringtoconsole)
   - [Using `String.toKebabCase`](#using-stringtokebabcase)
   - [Using `String.toSnakeCase`](#using-stringtosnakecase)
 
@@ -339,6 +340,24 @@ Hello world, my string is unicode free
 Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
 ```
 
+### Using `String.toConsole`
+
+```javascript
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-console.min.js
+```
+
+```javascript
+var text = 'hello world';
+
+text.toConsole();
+```
+
+Will display:
+
+```
+hello world
+```
+
 ### Using `String.toKebabCase`
 
 This method do not support the Asian alphabet.
@@ -415,6 +434,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.shuffle`](#stringshuffle)
   - [`String.stripTags`](#stringstripTags)
   - [`String.toAscii`](#stringtoascii)
+  - [`String.toConsole`](#stringtoconsole)
   - [`String.toKebabCase`](#stringtokebabcase)
   - [`String.toSnakeCase`](#stringtoSnakeCase)
 
@@ -616,6 +636,20 @@ Turn any non-ascii **letters** inside a string to its ascii counterpart and retu
 ```javascript
 String.prototype.toAscii = function(): String
 ```
+
+---
+
+### `String.toConsole`
+
+Display the string in the console.
+
+```javascript
+String.prototype.toConsole = function(): String
+```
+
+**Note**
+
+It will return the string to help you chain with others string prototypes.
 
 ---
 
