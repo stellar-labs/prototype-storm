@@ -60,6 +60,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 - Array
   - [Using `only`](#only)
   - [Using `sum`](#sum)
+  - [Using `toConsole`](#using-toconsole)
 - RegExp
   - [Using constant `LETTERS`](#using-constant-letters)
   - [Using constant `LOWERCASES`](#using-constant-lowercases)
@@ -115,6 +116,24 @@ Will display:
 10
 10
 10
+```
+
+### Using `toConsole`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-sum.min.js
+```
+
+```javascript
+var array = [1, 2, 3, 4];
+
+array.toConsole();
+```
+
+Will display:
+
+```
+[1, 2, 3, 4]
 ```
 
 ### Using constant `LETTERS`
@@ -382,6 +401,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 - Array
   - [`only`](#only)
   - [`sum`](#sum)
+  - [`toConsole`](#toconsole)
 - RegExp
   - [`LETTERS`](#letters)
   - [`LOWERCASES`](#lowercases)
@@ -422,6 +442,20 @@ Return the sum of all the items in an array.
 ```javascript
 Array.prototype.sum = function(): Number
 ```
+
+---
+
+### `toConsole`
+
+Display the array on the console.
+
+```javascript
+Array.prototype.toConsole = function(): Array
+```
+
+**Note**
+
+This prototype returns the array, to help you chain with other Array prototypes.
 
 ---
 
