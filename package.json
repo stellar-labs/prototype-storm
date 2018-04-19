@@ -20,6 +20,7 @@
     "test:string": "mocha --require babel-core/register test/string",
     "test:array": "mocha --require babel-core/register test/array",
     "test:regexp": "mocha --require babel-core/register test/regexp",
+    "test:function": "mocha --require babel-core/register test/function",
     "test:all": "mocha --require babel-core/register test/string && mocha --require babel-core/register test/array && mocha --require babel-core/register test/regexp"
   },
   "dependencies": {}
