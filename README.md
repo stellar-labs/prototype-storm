@@ -57,27 +57,24 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 
 ## Examples of uses
 
-- Array
-  - [Using `only`](#only)
-  - [Using `sum`](#sum)
-  - [Using `toConsole`](#using-toconsole)
-- RegExp
-  - [Using constant `LETTERS`](#using-constant-letters)
-  - [Using constant `LOWERCASES`](#using-constant-lowercases)
-  - [Using constant `UPPERCASES`](#using-constant-uppercases)
-- String
-  - [Using `ellipsis`](#using-ellipsis)
-  - [Using `empty`](#using-empty)
-  - [Using `format`](#using-format)
-  - [Using `nl2br`](#using-nl2br)
-  - [Using `replaceAll`](#using-replaceall)
-  - [Using `shuffle`](#using-shuffle)
-  - [Using `stripTags`](#using-striptags)
-  - [Using `toAscii`](#using-toascii)
-  - [Using `toKebabCase`](#using-tokebabcase)
-  - [Using `toSnakeCase`](#using-tosnakecase)
+- [Using `Array.only`](#using-array-only)
+- [Using `Array.sum`](#using-array-sum)
+- [Using `Array.toConsole`](#using-array-toconsole)
+- [Using `RegExp.LETTERS`](#using-regexp-letters)
+- [Using `RegExp.LOWERCASES`](#using-regexp-lowercases)
+- [Using `RegExp.UPPERCASES`](#using-regexp-uppercases)
+- [Using `String.ellipsis`](#using-string-ellipsis)
+- [Using `String.empty`](#using-string-empty)
+- [Using `String.format`](#using-string-format)
+- [Using `String.nl2br`](#using-string-nl2br)
+- [Using `String.replaceAll`](#using-string-replaceall)
+- [Using `String.shuffle`](#using-string-shuffle)
+- [Using `String.stripTags`](#using-string-striptags)
+- [Using `String.toAscii`](#using-string-toascii)
+- [Using `String.toKebabCase`](#using-string-tokebabcase)
+- [Using `String.toSnakeCase`](#using-string-tosnakecase)
 
-### Using `only`
+### Using `Array.only`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-only.min.js
@@ -94,7 +91,7 @@ Will display
 ['nodejs']
 ```
 
-### Using `sum`
+### Using `Array.sum`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-sum.min.js
@@ -118,7 +115,7 @@ Will display:
 10
 ```
 
-### Using `toConsole`
+### Using `Array.toConsole`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-sum.min.js
@@ -136,7 +133,7 @@ Will display:
 [1, 2, 3, 4]
 ```
 
-### Using constant `LETTERS`
+### Using constant `RegExp.LETTERS`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-letters.min.js
@@ -146,7 +143,7 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 var catch_all_letters = '/[' + RegExp.LETTERS + ']/g'; // /[^a-z-A-Z-...]/g
 ```
 
-### Using constant `LOWERCASES`
+### Using constant `RegExp.LOWERCASES`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-lowercases.min.js
@@ -156,7 +153,7 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 var catch_all_lowercases = new RegExp('[' + RegExp.LOWERCASES + ']', 'g');
 ```
 
-### Using constant `UPPERCASES`
+### Using constant `RegExp.UPPERCASES`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-uppercases.min.js
@@ -166,7 +163,7 @@ https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-
 var catch_all_uppercases = new RegExp('[' + RegExp.UPPERCASES + ']', 'g');
 ```
 
-### Using `ellipsis`
+### Using `String.ellipsis`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-ellipsis.min.js
@@ -190,7 +187,7 @@ Hey, how are you?
 Are you James???
 ```
 
-### Using `empty`
+### Using `String.empty`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-empty.min.js
@@ -214,7 +211,7 @@ true
 false
 ```
 
-### Using `format`
+### Using `String.format`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-format.min.js
@@ -238,7 +235,7 @@ Hi John, welcome to the home page.
 The nature is a book, and we are burning its pages instead of reading them.
 ```
 
-### Using `nl2br`
+### Using `String.nl2br`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-nl2br.min.js
@@ -259,7 +256,7 @@ Hi<br><br>Welcome to my website!
 Hi<br/>How are you?
 ```
 
-### Using `replaceAll`
+### Using `String.replaceAll`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-replace-all.min.js
@@ -280,7 +277,7 @@ Tesla model S are the most awesome car of <brand>!
 Tesla model S are the most awesome car of Tesla!
 ```
 
-### Using `shuffle`
+### Using `String.shuffle`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-shuffle.min.js
@@ -298,7 +295,7 @@ Will display:
 tJarciavSp
 ```
 
-### Using `stripTags`
+### Using `String.stripTags`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-stripTags.min.js
@@ -316,7 +313,7 @@ Will display:
 HomeWelcome to my website!
 ```
 
-### Using `toAscii`
+### Using `String.toAscii`
 
 This method do not support the Asian alphabet
 
@@ -339,7 +336,7 @@ Hello world, my string is unicode free
 Voix ambigue d'un coeur qui, a l'arrivee du zephyr, prefere les jattes de kiwis.
 ```
 
-### Using `toKebabCase`
+### Using `String.toKebabCase`
 
 This method do not support the Asian alphabet.
 
@@ -367,7 +364,7 @@ français-à-l-accent
 
 **Tips**
 
-Turn this prototype to make slugs by adding [`.toAscii`](#using-toascii) before calling this prototype:
+Turn this prototype to make slugs by adding [`String.toAscii`](#using-string-toascii) before calling this prototype:
 
 ```javascript
 var text1 = 'spring/summer 2018';
@@ -377,7 +374,7 @@ var slug1 = text.toAscii().toKebabCase(); // spring-summer-2018
 var slug2 = text.toAscii().toKebabCase(); // printemps-ete-2018
 ```
 
-### Using `toSnakeCase`
+### Using `String.toSnakeCase`
 
 This method do not support the Asian alphabet.
 
@@ -398,27 +395,24 @@ hey_but_you_was_a_php_web_dev_all_the_time
 
 ## Methods definitions
 
-- Array
-  - [`only`](#only)
-  - [`sum`](#sum)
-  - [`toConsole`](#toconsole)
-- RegExp
-  - [`LETTERS`](#letters)
-  - [`LOWERCASES`](#lowercases)
-  - [`UPPERCASES`](#uppercases)
-- String
-  - [`ellipsis`](#ellipsis)
-  - [`empty`](#empty)
-  - [`format`](#format)
-  - [`nl2br`](#nl2br)
-  - [`replaceAll`](#replaceall)
-  - [`shuffle`](#shuffle)
-  - [`stripTags`](#stripTags)
-  - [`toAscii`](#toascii)
-  - [`toKebabCase`](#tokebabcase)
-  - [`toSnakeCase`](#toSnakeCase)
+- [`Array.only`](#array-only)
+- [`Array.sum`](#array-sum)
+- [`Array.toConsole`](#array-toconsole)
+- [`RegExp.LETTERS`](#regexp-letters)
+- [`RegExp.LOWERCASES`](#regexp-lowercases)
+- [`RegExp.UPPERCASES`](#regexp-uppercases)
+- [`String.ellipsis`](#string-ellipsis)
+- [`String.empty`](#string-empty)
+- [`String.format`](#string-format)
+- [`String.nl2br`](#string-nl2br)
+- [`String.replaceAll`](#string-replaceall)
+- [`String.shuffle`](#string-shuffle)
+- [`String.stripTags`](#string-stripTags)
+- [`String.toAscii`](#string-toascii)
+- [`String.toKebabCase`](#string-tokebabcase)
+- [`String.toSnakeCase`](#string-toSnakeCase)
 
-### `only`
+### `Array.only`
 
 Return an array filtered from the values your provided.
 
@@ -435,7 +429,7 @@ Array.prototype.only = function(Object): Array
 
 ---
 
-### `sum`
+### `Array.sum`
 
 Return the sum of all the items in an array.
 
@@ -445,7 +439,7 @@ Array.prototype.sum = function(): Number
 
 ---
 
-### `toConsole`
+### `Array.toConsole`
 
 Display the array on the console.
 
@@ -459,7 +453,7 @@ This prototype returns the array, to help you chain with other Array prototypes.
 
 ---
 
-### `LETTERS`
+### `RegExp.LETTERS`
 
 Return the regexp that catches any unicode letters.
 
@@ -473,7 +467,7 @@ UTF-16 characters are not supported.
 
 ---
 
-### `LOWERCASES`
+### `RegExp.LOWERCASES`
 
 Return the regexp that catches any unicode lowercase letters.
 
@@ -487,6 +481,8 @@ UTF-16 characters are not supported.
 
 ---
 
+### `RegExp.UPPERCASES`
+
 Return the regexp that catches any unicode uppercase letters.
 
 ```javascript
@@ -499,7 +495,7 @@ UTF-16 characters are not supported.
 
 ---
 
-### `ellipsis`
+### `String.ellipsis`
 
 Returns the string with a maximum of character followed by a customizable ending.
 
@@ -516,7 +512,7 @@ String.prototype.ellipsis = function(Object): String
 
 ---
 
-### `empty`
+### `String.empty`
 
 Returns true if the string is empty, else returns false.
 
@@ -526,7 +522,7 @@ String.prototype.empty = function(): Boolean
 
 ---
 
-### `format`
+### `String.format`
 
 Returns the text and replace the placeholder of your choice by the associated value.
 
@@ -548,7 +544,7 @@ It replaces all the occurences of your placeholders.
 
 ---
 
-### `nl2br`
+### `String.nl2br`
 
 Returns the string and replace the line returns (like `\n`) by html return line `<br />` tag.
 
@@ -564,7 +560,7 @@ String.prototype.nl2br = function(Object): String
 
 ---
 
-### `replaceAll`
+### `String.replaceAll`
 
 Returns the string and replace all the occurences of a placeholder by its given value.
 
@@ -585,7 +581,7 @@ String.prototype.replaceAll = function(Object): String
 
 ---
 
-### `shuffle`
+### `String.shuffle`
 
 Return a randomized version of the string.
 
@@ -595,7 +591,7 @@ String.prototype.shuffle = function(): String
 
 ---
 
-### `stripTags`
+### `String.stripTags`
 
 Returns the string and remove all the html tags inside of it.
 
@@ -605,7 +601,7 @@ String.prototype.stripTags = function(): String
 
 --- 
 
-### `toAscii`
+### `String.toAscii`
 
 This method do not support the Asian alphabet.
 
@@ -617,7 +613,7 @@ String.prototype.toAscii = function(): String
 
 ---
 
-### `toKebabCase`
+### `String.toKebabCase`
 
 This method do not support the Asian alphabet.
 
@@ -628,7 +624,7 @@ String.prototype.toKebabCase = function(): String
 ```
 ---
 
-### `toSnakeCase`
+### `String.toSnakeCase`
 
 This method do not support the Asian alphabet.
 
