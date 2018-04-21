@@ -1,7 +1,5 @@
 'use strict'
 
-import type from '../function/type.js';
-
 if( 'where-equal' in Array.prototype === false ) {
 	Array.prototype.whereEqual = function(options) {
 		if( 'value' in options === false ) {
