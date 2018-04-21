@@ -62,6 +62,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `Array.sum`](#using-arraysum)
   - [Using `Array.toConsole`](#using-arraytoconsole)
   - [Using `Array.whereEqual`](#using-arraywhereequal)
+  - [Using `Array.whereNotEqual`](#using-arraywherenotequal)
 - Function
   - [Using `Function.type`](#using-functiontype)
 - RegExp
@@ -161,6 +162,29 @@ Will display:
 ```
 [ 2, '2' ]
 [ 2 ]
+[]
+```
+
+### Using `Array.whereNotEqual`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-where-equal.min.js
+```
+
+```javascript
+var input = [1, 2, '2'];
+var input2 = [];
+
+console.log( input.whereNotEqual({ value: 2 }) );
+console.log( input.whereNotEqual({ value: 2, strict: true }) );
+console.log( input2.whereNotEqual({ value: 2 }) );
+```
+
+Will display:
+
+```
+[ 1 ]
+[ 1, '2' ]
 []
 ```
 
