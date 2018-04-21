@@ -36,7 +36,21 @@ if( file_exists === true ) {
 }
 
 // Create the file 
-var code = `'use strict'
+var code = '';
+
+if( folder === 'function' ) {
+	var code = `'use strict'
+if( typeof ` + camelCase(feature) + ` !== 'function' ) {
+\tvar ` + camelCase(feature) + ` = function() {
+\t\t// Have fun!
+\t};
+}
+
+export default ` + camelCase(feature) + `;
+`;
+}
+else {
+	var code = `'use strict'
 
 if( '` + feature + `' in ` + ucfirst(folder) + `.prototype === false ) {
 \t` + ucfirst(folder) + `.prototype.`+ camelCase(feature) + ` = function() {
@@ -46,6 +60,7 @@ if( '` + feature + `' in ` + ucfirst(folder) + `.prototype === false ) {
 
 export default ` + ucfirst(folder) + `.prototype.` + camelCase(feature) + `;
 `;
+}
 
 fs.writeFileSync('./src/js/' + folder + '/' + feature + '.js', code, 'utf8', function(error) {
 	if( error ) {
@@ -53,8 +68,25 @@ fs.writeFileSync('./src/js/' + folder + '/' + feature + '.js', code, 'utf8', fun
 	}
 });
 
-console.log('src/js/' + folder + '/' + feature + '.js prototype created.');
+console.log('src/js/' + folder + '/' + feature + '.js ' + (folder === 'function' ? 'function' : 'prototype') + ' created.');
 
+if( folder === 'function' ) {
+	code = `'use strict'
+var should = require('chai').should();
+
+import ` + camelCase(feature) + ` from '../../src/js/function/` + feature + `.js';
+
+describe('Function', function() {
+\tdescribe('` + camelCase(feature) + `', function() {
+\t\t// Put your "it('...')" tests here, have fun!
+\t\tit('should exists', function() {
+\t\t\t` + camelCase(feature) + `.should.be.a('function');
+\t\t});
+\t});
+}); 
+`;
+}
+else {
 code = `'use strict'
 
 var should = require('chai').should();
@@ -69,7 +101,8 @@ describe('` + ucfirst(folder) + `', function() {
 \t\t});
 \t});
 });
-`;
+`;	
+}
 
 fs.writeFileSync('./test/' + folder + '/' + feature + '.test.js', code, function(error) {
 	if( error ) {
