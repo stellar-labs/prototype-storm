@@ -61,6 +61,8 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `Array.only`](#using-arrayonly)
   - [Using `Array.sum`](#using-arraysum)
   - [Using `Array.toConsole`](#using-arraytoconsole)
+- Function
+  - [Using `Function.type`](#using-functiontype)
 - RegExp
   - [Using `RegExp.LETTERS`](#using-regexpletters)
   - [Using `RegExp.LOWERCASES`](#using-regexplowercases)
@@ -135,6 +137,36 @@ Will display:
 
 ```
 [1, 2, 3, 4]
+```
+
+### Usning `Function.type`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-type.min.js
+```
+
+```javascript
+var var_null = null;
+var var_undefined = undefined;
+var var_string = 'hello world';
+var var_number = 46.7;
+var var_object = {name: "John"};
+
+console.log( type(var_null) );
+console.log( type(var_undefined) );
+console.log( type(var_string) );
+console.log( type(var_number) );
+console.log( type(var_object) );
+```
+
+Will display (they all are string):
+
+```
+null
+undefined
+String
+Number
+Object
 ```
 
 ### Using constant `RegExp.LETTERS`
