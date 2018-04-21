@@ -1,10 +1,9 @@
 'use strit';
 
-export function type( variable ) {
-	if( variable === null || variable === undefined ) {
-		return variable;
-	}
-	else {
-		return variable.constructor.name;
+if( typeof type !== 'function' ) {
+	var type = function(variable) {
+		return variable === null ? 'null' : (variable === undefined) ? 'undefined' : variable.constructor.name;
 	}
 }
+
+export default type;
