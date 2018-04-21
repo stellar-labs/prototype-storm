@@ -526,6 +526,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
   - [`Array.whereEqual`](#arraywhereequal)
+  - [`Array.whereNotEqual`](#arraywherenotequal)
 - Function
   - [`Function.type`](#functiontype)
 - RegExp
@@ -593,6 +594,23 @@ Returns an array of items that are equal to the provided value.
 
 ```javascript
 Array.prototype.whereEqual = function(Object): Array
+```
+
+**Options**
+
+| property | type     | required | default | possible values | description |
+|----------|----------|----------|---------|-----------------|-------------|
+| value    | Any      | yes      |         |                 |             |
+| strict   | Boolean  | no       | false   |                 |             |
+
+---
+
+### `Array.whereNotEqual`
+
+Returns an array of items that are not equal to the provided value.
+
+```javascript
+Array.prototype.whereNotEqual = function(Object): Array
 ```
 
 **Options**
