@@ -61,6 +61,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `Array.only`](#using-arrayonly)
   - [Using `Array.sum`](#using-arraysum)
   - [Using `Array.toConsole`](#using-arraytoconsole)
+  - [Using `Array.whereEqual`](#using-arraywhereequal)
 - Function
   - [Using `Function.type`](#using-functiontype)
 - RegExp
@@ -138,6 +139,29 @@ Will display:
 
 ```
 [1, 2, 3, 4]
+```
+
+### Using `Array.whereEqual`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-where-equal.min.js
+```
+
+```javascript
+var input = [1, 2, '2', 3, 4, 5];
+var input2 = [];
+
+console.log( input.whereEqual({ value: 2 }) );
+console.log( input.whereEqual({ value: 2, strict: true }) );
+console.log( input.whereEqual({ value: 2 }) );
+```
+
+Will display:
+
+```
+[ 2, '2' ]
+[ 2 ]
+[]
 ```
 
 ### Usning `Function.type`
