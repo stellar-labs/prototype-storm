@@ -83,7 +83,7 @@ describe('Function', function() {
 \t\t\t` + camelCase(feature) + `.should.be.a('function');
 \t\t});
 \t});
-}); 
+});
 `;
 }
 else {

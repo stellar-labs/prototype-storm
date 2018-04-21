@@ -75,6 +75,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `String.replaceAll`](#using-stringreplaceall)
   - [Using `String.shuffle`](#using-stringshuffle)
   - [Using `String.stripTags`](#using-stringstriptags)
+  - [Using `String.test`](#using-stringtest)
   - [Using `String.toAscii`](#using-stringtoascii)
   - [Using `String.toConsole`](#using-stringtoconsole)
   - [Using `String.toKebabCase`](#using-stringtokebabcase)
@@ -349,6 +350,29 @@ Will display:
 HomeWelcome to my website!
 ```
 
+### Using `String.test`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-test.min.js
+```
+
+```javascript
+var text = 'hello world';
+var have_letters = /[a-z]/gi;
+var does_not_have_number = new RegExp('[^\d+]', 'g');
+
+console.log( text.test({ regexp: have_letters }) );
+console.log( text.test({ regexp: does_not_have_numbers }) );
+```
+
+Will display:
+
+```
+true
+true
+```
+
+
 ### Using `String.toAscii`
 
 This method do not support the Asian alphabet
@@ -467,6 +491,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.replaceAll`](#stringreplaceall)
   - [`String.shuffle`](#stringshuffle)
   - [`String.stripTags`](#stringstripTags)
+  - [`String.test`](#stringtest)
   - [`String.toAscii`](#stringtoascii)
   - [`String.toConsole`](#stringtoconsole)
   - [`String.toKebabCase`](#stringtokebabcase)
@@ -674,6 +699,26 @@ String.prototype.stripTags = function(): String
 ```
 
 --- 
+
+### `String.test`
+
+Returns true if the string matches the regular expression, else returns false.
+
+```javascript
+String.prototype.test = function(Object): String
+```
+
+**Options**
+
+| property | type   | required | default | possible values | description |
+|----------|--------|----------|---------|-----------------|-------------|
+| regexp   | RegExp | yes      |         |                 |             |
+
+**Note**
+
+It internally uses [`String.prototype.test`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) native prototype.
+
+---
 
 ### `String.toAscii`
 
