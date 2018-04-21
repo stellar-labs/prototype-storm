@@ -1,4 +1,4 @@
-'use strit';
+'use strict';
 
 if( typeof type !== 'function' ) {
 	var type = function(variable) {
