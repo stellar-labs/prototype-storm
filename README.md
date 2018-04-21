@@ -453,6 +453,8 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
+- Function
+  - [`Function.type`](#functiontype)
 - RegExp
   - [`RegExp.LETTERS`](#regexpletters)
   - [`RegExp.LOWERCASES`](#regexplowercases)
@@ -508,6 +510,20 @@ Array.prototype.toConsole = function(): Array
 **Note**
 
 This prototype returns the array, to help you chain with other Array prototypes.
+
+---
+
+### `Function.type`
+
+Return the type of a variable.
+
+```javascript
+var type = function(variable): String
+```
+
+**Note**
+
+It always returns a string, even for `undefined` or `null` values.
 
 ---
 
