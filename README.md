@@ -501,6 +501,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
+  - [`Array.whereEqual`](#arraywhereequal)
 - Function
   - [`Function.type`](#functiontype)
 - RegExp
@@ -559,6 +560,23 @@ Array.prototype.toConsole = function(): Array
 **Note**
 
 This prototype returns the array, to help you chain with other Array prototypes.
+
+---
+
+### `Array.whereEqual`
+
+Returns an array of items that are equal to the provided value.
+
+```javascript
+Array.prototype.whereEqual = function(Object): Array
+```
+
+**Options**
+
+| property | type     | required | default | possible values | description |
+|----------|----------|----------|---------|-----------------|-------------|
+| value    | Any      | yes      |         |                 |             |
+| strict   | Boolean  | no       | false   |                 |             |
 
 ---
 
