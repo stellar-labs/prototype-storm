@@ -61,6 +61,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `Array.only`](#using-arrayonly)
   - [Using `Array.sum`](#using-arraysum)
   - [Using `Array.toConsole`](#using-arraytoconsole)
+  - [Using `Array.toJson`](#using-arraytojson)
   - [Using `Array.whereEqual`](#using-arraywhereequal)
   - [Using `Array.whereNotEqual`](#using-arraywherenotequal)
 - Function
@@ -140,6 +141,25 @@ Will display:
 
 ```
 [1, 2, 3, 4]
+```
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-to-json.min.js
+```
+
+```javascript
+var array1 = [1, 2, 3];
+var array2 = [{ name: 'John' }, { name: 'Foo' }];
+
+console.log( array1.toJson() );
+console.log( array2.toJson() );
+```
+
+Will display:
+
+```
+[1,2,3]
+[{"name": "John"},{"name": "Foo"}]
 ```
 
 ### Using `Array.whereEqual`
