@@ -630,6 +630,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 ## Methods definitions
 
 - Array
+  - [`Array.isEmpty`](#arrayisempty)
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
@@ -657,6 +658,20 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.toConsole`](#stringtoconsole)
   - [`String.toKebabCase`](#stringtokebabcase)
   - [`String.toSnakeCase`](#stringtoSnakeCase)
+
+### `Array.isEmpty`
+
+Returns true if the array does not contains any items, else returns false.
+
+```javascript
+Array.prototype.isEmpty = function(): Boolean
+```
+
+**Note**
+
+It returns false in the case the array contains a `null` or an `undefined` item.
+
+---
 
 ### `Array.only`
 
