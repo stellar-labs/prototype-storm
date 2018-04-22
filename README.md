@@ -74,6 +74,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `String.ellipsis`](#using-stringellipsis)
   - [Using `String.empty`](#using-stringempty)
   - [Using `String.format`](#using-stringformat)
+  - [Using `String.isInteger`](#using-stringisinteger)
   - [Using `String.isJson`](#using-stringisjson)
   - [Using `String.nl2br`](#using-stringnl2br)
   - [Using `String.replaceAll`](#using-stringreplaceall)
@@ -339,6 +340,46 @@ Will display:
 Hi John, welcome to the home page.
 <h1>Configuration</h1><p>Hi Frank, welcome to the Configuration page</p>
 The nature is a book, and we are burning its pages instead of reading them.
+```
+
+### Using `String.isInteger`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-is-integer.min.js
+```
+
+```javascript
+var string1 = '1';
+var string2 = 'two';
+var string3 = '3.3';
+var string4 = '-4';
+var string5 = '-5.5';
+
+console.log( '"1" is:' );
+console.log( string1.isInteger() );
+console.log( '"two" is:' );
+console.log( string2.isInteger() );
+console.log( '"3.3" is:' );
+console.log( string3.isInteger() );
+console.log( '"-4" is:' );
+console.log( string4.isInteger() );
+console.log( '"-5.5" is:' );
+console.log( string5.isInteger() );
+```
+
+Will display:
+
+```
+"1" is:
+true
+"two" is:
+false
+"3.3" is:
+false
+"-4" is:
+true
+"-5.5" is:
+false
 ```
 
 ### Using `String.isJson`
