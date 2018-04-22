@@ -580,6 +580,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.ellipsis`](#stringellipsis)
   - [`String.empty`](#stringempty)
   - [`String.format`](#stringformat)
+  - [`String.isJson`](#stringisjson)
   - [`String.nl2br`](#stringnl2br)
   - [`String.replaceAll`](#stringreplaceall)
   - [`String.shuffle`](#stringshuffle)
@@ -777,6 +778,16 @@ It replaces all the occurences of your placeholders.
 **The following prototypes will also be available**
 
 - [`replaceAll`](#replaceall)
+
+---
+
+### `String.isJson`
+
+Returns true if the string is a valid JSON, else returns false.
+
+```javascript
+String.prototype.isJson = function(): Boolean
+```
 
 ---
 
