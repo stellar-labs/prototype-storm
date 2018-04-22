@@ -621,6 +621,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.ellipsis`](#stringellipsis)
   - [`String.empty`](#stringempty)
   - [`String.format`](#stringformat)
+  - [`String.isInteger`](#stringisinteger)
   - [`String.isJson`](#stringisjson)
   - [`String.nl2br`](#stringnl2br)
   - [`String.replaceAll`](#stringreplaceall)
@@ -819,6 +820,16 @@ It replaces all the occurences of your placeholders.
 **The following prototypes will also be available**
 
 - [`replaceAll`](#replaceall)
+
+---
+
+### `String.isInteger`
+
+Returns true if the string is an integer, else returns false.
+
+```javascript
+String.prototype.isInteger = function(): Boolean
+```
 
 ---
 
