@@ -545,6 +545,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
+  - [`Array.toJson`](#arraytojson)
   - [`Array.whereEqual`](#arraywhereequal)
   - [`Array.whereNotEqual`](#arraywherenotequal)
 - Function
@@ -605,6 +606,16 @@ Array.prototype.toConsole = function(): Array
 **Note**
 
 This prototype returns the array, to help you chain with other Array prototypes.
+
+---
+
+### `Array.toJson`
+
+Returns the JSON reprensentation of the array as a string.
+
+```javascript
+Array.prototype.toJson = function(): String
+```
 
 ---
 
