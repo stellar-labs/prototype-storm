@@ -74,6 +74,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `String.ellipsis`](#using-stringellipsis)
   - [Using `String.empty`](#using-stringempty)
   - [Using `String.format`](#using-stringformat)
+  - [Using `String.isJson`](#using-stringisjson)
   - [Using `String.nl2br`](#using-stringnl2br)
   - [Using `String.replaceAll`](#using-stringreplaceall)
   - [Using `String.shuffle`](#using-stringshuffle)
@@ -338,6 +339,27 @@ Will display:
 Hi John, welcome to the home page.
 <h1>Configuration</h1><p>Hi Frank, welcome to the Configuration page</p>
 The nature is a book, and we are burning its pages instead of reading them.
+```
+
+### Using `String.isJson`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-is-json.min.js
+```
+
+```javascript
+var string1 = '{"name": "John", "age": 21}';
+var string2 = 'hello world';
+
+console.log( string1.isJson() );
+console.log( string2.isJson() );
+```
+
+Will display:
+
+```
+true
+false
 ```
 
 ### Using `String.nl2br`
