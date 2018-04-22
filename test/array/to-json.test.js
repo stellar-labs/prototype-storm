@@ -26,5 +26,9 @@ describe('Array', function() {
 
 			array.toJson().should.equal('[{"name":"John"},{"name":"Foo"}]');
 		});
+
+		it('should return a string', function() {
+			[].toJson().should.be.a('String');
+		});
 	});
 });
