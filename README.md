@@ -58,6 +58,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 ## Examples of uses
 
 - Array
+  - [Using `Array.except`](#using-arrayexcept)
   - [Using `Array.isEmpty`](#using-arrayisempty)
   - [Using `Array.only`](#using-arrayonly)
   - [Using `Array.sum`](#using-arraysum)
@@ -86,6 +87,27 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
   - [Using `String.toConsole`](#using-stringtoconsole)
   - [Using `String.toKebabCase`](#using-stringtokebabcase)
   - [Using `String.toSnakeCase`](#using-stringtosnakecase)
+
+### Using `Array.except`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-only.min.js
+```
+
+```javascript
+var array1 = ['javascript', 'html', 'css', 'nodejs'];
+var array2 = [];
+
+console.log( array1.except({ items: ['nodejs'] }) );
+console.log( array2.except({ items: ['nodejs'] }) );
+```
+
+Will display:
+
+```
+[ 'javascript', 'html', 'css' ]
+[]
+```
 
 ### Using `Array.isEmpty`
 
