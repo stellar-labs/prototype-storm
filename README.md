@@ -675,6 +675,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 - Array
   - [`Array.except`](#arrayexcept)
   - [`Array.isEmpty`](#arrayisempty)
+  - [`Array.last`](#arraylast)
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
   - [`Array.toConsole`](#arraytoconsole)
@@ -728,6 +729,22 @@ Array.prototype.isEmpty = function(): Boolean
 **Note**
 
 It returns false in the case the array contains a `null` or an `undefined` item.
+
+---
+
+### `Array.last`
+
+Returns the last element, or the last n elements given a count.
+
+```javascript
+Array.prototype.last = function(Object = { count: 1 }): Any|Array|null
+```
+
+**Options**
+
+| property | type    | required | default | possible values | description |
+|----------|---------|----------|---------|-----------------|-------------|
+| count    | Integer | no       | 1       |                 |             |
 
 ---
 
