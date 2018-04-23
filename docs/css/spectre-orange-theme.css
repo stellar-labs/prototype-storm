@@ -14,8 +14,14 @@ a, .btn {
 	color: black;
 }
 
+/* Utilities */
+
 .navbar {
 	padding-left: 7px;
     padding-right: 7px;
     padding-top: 7px;
+}
+
+.navbar-brand {
+	white-space: nowrap;
 }
