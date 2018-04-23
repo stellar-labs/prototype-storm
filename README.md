@@ -652,6 +652,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 ## Methods definitions
 
 - Array
+  - [`Array.except`](#arrayexcept)
   - [`Array.isEmpty`](#arrayisempty)
   - [`Array.only`](#arrayonly)
   - [`Array.sum`](#arraysum)
@@ -681,6 +682,14 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.toKebabCase`](#stringtokebabcase)
   - [`String.toSnakeCase`](#stringtoSnakeCase)
 
+### `Array.except`
+
+Returns the elements (as an Array) that are not included in the provided items.
+
+```javascript
+Array.prototype.except = function(Object): Array
+```
+
 ### `Array.isEmpty`
 
 Returns true if the array does not contains any items, else returns false.
@@ -688,6 +697,12 @@ Returns true if the array does not contains any items, else returns false.
 ```javascript
 Array.prototype.isEmpty = function(): Boolean
 ```
+
+**Options**
+
+| property | type   | required | default | possible values | description |
+|----------|--------|----------|---------|-----------------|-------------|
+| items    | Array  | yes      |         |                 |             |
 
 **Note**
 
