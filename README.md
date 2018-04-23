@@ -235,7 +235,7 @@ Will display:
 []
 ```
 
-### Usning `Function.type`
+### Using `Function.type`
 
 ```
 https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-type.min.js
