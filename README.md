@@ -751,6 +751,8 @@ Returns the elements (as an Array) that are not included in the provided items.
 Array.prototype.except = function(Object): Array
 ```
 
+---
+
 ### `Array.isEmpty`
 
 Returns true if the array does not contains any items, else returns false.
