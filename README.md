@@ -701,6 +701,7 @@ hey_but_you_was_a_php_web_dev_all_the_time
 ## Methods definitions
 
 - Array
+  - [`Array.average`](#arrayaverage)
   - [`Array.except`](#arrayexcept)
   - [`Array.isEmpty`](#arrayisempty)
   - [`Array.last`](#arraylast)
@@ -731,6 +732,16 @@ hey_but_you_was_a_php_web_dev_all_the_time
   - [`String.toConsole`](#stringtoconsole)
   - [`String.toKebabCase`](#stringtokebabcase)
   - [`String.toSnakeCase`](#stringtoSnakeCase)
+
+### `Array.average`
+
+Returns the average of all the items of an array.
+
+```javascript
+Array.prototype.average = function(): Number
+```
+
+---
 
 ### `Array.except`
 
