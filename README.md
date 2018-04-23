@@ -60,6 +60,7 @@ For example, I want to use `test` and `endsWith`, so my `index.html` will looks 
 - Array
   - [Using `Array.except`](#using-arrayexcept)
   - [Using `Array.isEmpty`](#using-arrayisempty)
+  - [Using `Array.last`](#using-arraylast)
   - [Using `Array.only`](#using-arrayonly)
   - [Using `Array.sum`](#using-arraysum)
   - [Using `Array.toConsole`](#using-arraytoconsole)
@@ -131,6 +132,26 @@ Will display:
 true
 false
 false
+```
+
+### Using `Array.last`
+
+```
+https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/prototype-storm-last.min.js
+```
+
+```javascript
+var array1 = [1, 2, 3, 4];
+
+console.log( array1.last() );
+console.log( array1.last({ count: 3 }) );
+```
+
+Will display:
+
+```
+4
+[ 2, 3, 4 ]
 ```
 
 ### Using `Array.only`
