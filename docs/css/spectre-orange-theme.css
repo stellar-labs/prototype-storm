@@ -1,0 +1,21 @@
+a, .btn {
+	color: #E68200;
+}
+
+.divider, .panel, .form-select, .form-input, .btn, .btn.btn-primary {
+	border-color: #E68200;
+}
+
+.btn.btn-primary {
+	background-color: #E68200;
+}
+
+.btn.btn-link {
+	color: black;
+}
+
+.navbar {
+	padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+}
