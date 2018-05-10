@@ -42,7 +42,7 @@ _Node < 8_
 var prototypeStorm = require('prototype-storm');
 ```
 
-_Node >= 8_
+_ES6 module_
 
 ```javascript
 import 'prototype-storm';
