@@ -1,0 +1,197 @@
+const jsdocApi = require('jsdoc-api');
+const fs = require('fs');
+
+const explainations = jsdocApi.explainSync({
+    files: [
+        './first.js'
+    ]
+});
+
+let prototypes = [];
+
+for(let prototype of explainations) {
+    if( prototype.undocumented === true || prototype.kind === 'package' ) {
+        continue;
+    }
+
+    console.log(prototype);
+
+    let name = prototype.name;
+    let returns = prototype.returns[0].type.names.join(' or ');
+    let throws = prototype.exceptions;
+    let params = prototype.params;
+    let summary = prototype.summary;
+    let description = prototype.description;
+    let start_line = prototype.meta.lineno;
+    let links = prototype.see;
+    let options = [];
+    let examples = [];
+
+    for( let example of prototype.examples ) {
+        examples.push(`
+            <pre class="code" data-lang="javascript"><code class="javascript">${example}</code></pre>
+        `);
+    }
+
+    for( let param of params ) {
+        let type = param.type.names.join(' or ');
+        let name = param.name.replace(/^[\w]+\./, '<span class="text-secondary">$&</span>');
+        let description = param.description;
+        let defaultvalue = 'defaultvalue' in param ? param.defaultvalue : '';
+        
+        options.push(`
+            <tr>
+                <td>${type}</td>
+                <td>${name}</td>
+                <td>${defaultvalue}</td>
+                <td>${description}</td>
+            </tr>
+        `);
+    }
+
+    prototypes.push(`
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span class="text-bold"><strong>${name}</strong></span>
+                        <p>${summary}</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="${name}-example">
+                            <a href="">Example</a>
+                        </li>
+                        <li class="tab-item" data-display="${name}-options">
+                            <a href="">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="${name}-note">
+                            <a href="">Note</a>
+                        </li>
+                        <li class="tab-item" data-display="${name}-cdn">
+                            <a href="">CDN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="${name}-example">
+                        ${examples.join('')}
+                    </div>
+                    <div class="tab-item-content d-hide" id="${name}-options">
+                        <table class="table table-striped table-hover">
+                            <thead>    
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${options.join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-item-content d-hide" id="${name}-note">
+                        <p>No note available.</p>
+                    </div>
+                    <div class="tab-item-content d-hide" id="${name}-cdn">
+                        <pre class="code" data-lang="html"><code class="html">&#60;script type="text/javascript" src="${links[0]}"&#62;&#60;/script&#62;</code></pre>
+                    </div>
+                </div>
+                <div class="panel-footer">	
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">Copy CDN link&nbsp; <i class="icon-cloud-download"></i></button>
+                        <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-social-github"></i></a>
+                        <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-social-github"></i></a>
+                    </div>			    	
+                </div>
+            </div>
+        </div>
+    `);
+}
+
+let page = `
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="Supercharge your Javascript!" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Prototype Storm - Supercharge your Javascript!</title>
+            <link rel="stylesheet" type="text/css" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.eot">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.svg">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.ttf">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff2">
+            <link rel="stylesheet" type="text/css" href="/prototype-storm/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
+            <!-- <link rel="stylesheet" type="text/css" href="/framework/highlightjs/9.12.0/css/atom-one-light.css"  /> -->
+            <link rel="stylesheet" href="/prototype-storm/css/spectre-orange-theme.css" />
+            <!-- <link rel="stylesheet" href="/css/spectre-orange-theme.css" /> -->
+        </head>
+        <body>
+            <header class="navbar">
+                <section class="navbar-section">
+                    <div class="dropdown">
+                        <a class="btn btn-link dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="/prototype-storm/installation" disabled="true" tabindex="-1">Installation</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/" class="navbar-brand mr-2 text-uppercase">
+                        Prototype Storm
+                    </a>
+                    <a href="/prototype-storm/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
+                    <a href="https://github.com/stellar-labs/prototype-storm" class="btn btn-link hide-sm">GitHub&nbsp; <i class="icon-social-github"></i></a>
+                </section>
+                <section class="navbar-section">
+                    <div class="input-group input-inline">
+                        <div class="form-group">
+                            <select class="form-select">
+                                <option>0.1.0</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <div class="divider"></div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column col-12">
+                        <br />
+                        <h2>Supercharge your Javascript!</h2>
+                    </div>
+                    <div class="column col-12">
+                        <br />
+                        <input class="form-input" type="text" placeholder="search">
+                        <br />
+                    </div>
+                    <div>
+                    </div>
+                    ${prototypes.join('')}
+                </div>
+            </div>	
+            <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
+            <!-- <script type="text/javascript" src="/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script> -->
+            <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
+            <!-- <script type="text/javascript" src="/js/spectrecss-tabs.js"></script> -->
+            <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
+            <!-- <script type="text/javascript" src="/js/highlightjs.js" ></script> -->
+        </body>
+    </html>
+`;
+
+try {
+    fs.writeFileSync('./docs/prototype-storm/index.html', new Buffer(page));
+}
+catch( error ) {
+    console.error(error);
+}

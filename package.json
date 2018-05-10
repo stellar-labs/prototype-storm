@@ -13,6 +13,7 @@
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "jsdoc": "^3.5.5",
+    "jsdoc-api": "4.*",
     "mocha": "^5.1.1",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3"
@@ -20,6 +21,8 @@
   "scripts": {
     "build": "webpack --progress --display errors-only --config webpack/test.js && mocha && webpack --progress --display normal --optimize-minimize --config webpack/build.js",
     "test": "webpack --progress --display errors-only --config webpack/test.js && mocha",
-    "eslint": "eslint --init"
-  }
+    "eslint": "eslint --init",
+    "make:doc": "node doc"
+  },
+  "dependencies": {}
 }
