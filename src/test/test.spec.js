@@ -5,6 +5,7 @@ import '../js/map.js';
 import '../js/average.js';
 import '../js/empty.js';
 import '../js/sum.js';
+import '../js/json.js';
 describe('Prototype Storm', () => {
   describe('Average', () => {
     it('Should return the average of an array', () => {
@@ -70,6 +71,32 @@ describe('Prototype Storm', () => {
     });
     it('Should return an empty object', () => {
       expect({}.flatten()).to.deep.equal({});
+    });
+  });
+  describe('Json', () => {
+    it('Should return the stringified version of an array of strings', () => {
+      expect(['first', 'second', 'third'].json()).to.deep.equal('["first","second","third"]');
+    });
+    it('Should return the stringified version of an array of strings', () => {
+      expect([1, 2, 3].json()).to.deep.equal('[1,2,3]');
+    });
+    it('Should return the stringified version of an array of objects', () => {
+      expect([{a: 1}, {b: 2}, {c: 3}].json()).to.deep.equal('[{"a":1},{"b":2},{"c":3}]');
+    });
+    it('Should return the stringified version of an array of objects', () => {
+      expect([{a: 'first'}, {b: 'second'}, {c: 'third'}].json()).to.deep.equal('[{"a":"first"},{"b":"second"},{"c":"third"}]');
+    });
+    it('Should return the stringified version of an object of string', () => {
+      expect({a: 'first', b: 'second', c: 'third'}.json()).to.deep.equal('{"a":"first","b":"second","c":"third"}');
+    });
+    it('Should return the stringified version of an object of numbers', () => {
+      expect({a: 1, b: 2, c: 3}.json()).to.deep.equal('{"a":1,"b":2,"c":3}');
+    });
+    it('Should return the stringified version of string', () => {
+      expect('JavaScript').to.deep.equal('JavaScript');
+    });
+    it('Should return the stringified version of number', () => {
+      expect((123).json()).to.deep.equal('123');
     });
   });
   describe('Map', () => {
