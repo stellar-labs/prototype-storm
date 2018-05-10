@@ -8,6 +8,7 @@ export default (() => {
      * @example [].empty() // true
      * @example ''.empty() // true
      * @example 0.empty() // true
+     * @example new Regexp('').empty() // true
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/empty.min.js
      * @see https://github.com/stellar-labs/prototype-storm/empty.js
@@ -25,6 +26,9 @@ export default (() => {
       }
       if (this.constructor === Number) {
         return this === 0;
+      }
+      if(this.constructor === RegExp) {
+        return this == '/(?:)/';
       }
       return;
     };
