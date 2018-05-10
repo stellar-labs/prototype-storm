@@ -9,6 +9,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "camelcase": "5.*",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
@@ -25,8 +26,8 @@
     "build": "webpack --progress --display errors-only --config webpack/test.js && mocha && webpack --progress --display normal --optimize-minimize --config webpack/build.js",
     "test": "webpack --progress --display errors-only --config webpack/test.js && mocha",
     "eslint": "eslint --init",
-    "make:doc": "node doc",
-    "make:prototype": "node prototype"
+    "make:doc": "node make-doc",
+    "make:prototype": "node make-prototype"
   },
   "dependencies": {}
 }
