@@ -1,0 +1,40 @@
+a, .btn, .tab .tab-item a.active, .tab .tab-item.active a {
+	color: #E68200;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:hover {
+	background-color: #995700;
+	border-color: #995700;
+}
+
+.divider, .panel, .form-select, .form-input, .btn, .btn.btn-primary, .tab .tab-item a.active, .tab .tab-item.active a {
+	border-color: #E68200;
+}
+
+.btn.btn-primary {
+	background-color: #E68200;
+}
+
+.btn.btn-link {
+	color: black;
+}
+
+a:focus {
+	box-shadow: none;
+}
+
+/* Utilities */
+
+.navbar {
+	padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+}
+
+.navbar-brand {
+	white-space: nowrap;
+}
+
+.tab-item-content {
+	padding-top: 20px;
+}
