@@ -125,4 +125,5 @@ catch( error ) {
     return;
 }
 
+fancyLog.info('created the test file ' + prototype_name + '.js');
 fancyLog.info('prototype ready, have fun!');
