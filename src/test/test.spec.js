@@ -6,6 +6,7 @@ import '../js/average.js';
 import '../js/empty.js';
 import '../js/sum.js';
 import '../js/json.js';
+import '../js/shuffle.js';
 describe('Prototype Storm', () => {
   describe('Average', () => {
     it('Should return the average of an array', () => {
@@ -105,6 +106,17 @@ describe('Prototype Storm', () => {
     });
     it('Should return the indexes of the object', () => {
       expect({a: 1, b: 2, c: 3}.map((value, index) => index)).to.deep.equal(['a', 'b', 'c']);
+    });
+  });
+  describe('Shuffle', () => {
+    it('Should return the array randomized', () => {
+      expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 0].shuffle()).to.not.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+    });
+    it('Should return the string randomized', () => {
+      expect('aminnairi'.shuffle()).to.not.deep.equal('aminnairi');
+    });
+    it('Should return the number randomized', () => {
+      expect((1234567890).shuffle()).to.not.deep.equal(1234567890);
     });
   });
   describe('Sum', () => {
