@@ -4,6 +4,7 @@ import '../js/flatten.js';
 import '../js/map.js';
 import '../js/average.js';
 import '../js/empty.js';
+import '../js/sum.js';
 describe('Prototype Storm', () => {
   describe('Average', () => {
     it('Should return the average of an array', () => {
@@ -77,6 +78,23 @@ describe('Prototype Storm', () => {
     });
     it('Should return the indexes of the object', () => {
       expect({a: 1, b: 2, c: 3}.map((value, index) => index)).to.deep.equal(['a', 'b', 'c']);
+    });
+  });
+  describe('Sum', () => {
+    it('Should return the sum of the array\'s members when used on an array', () => {
+      expect([1, 2, 3].sum()).to.deep.equal(6);
+    });
+    it('Should return zero when used on an empty array', () => {
+      expect([].sum()).to.deep.equal(0);
+    });
+    it('Should return zero when used on object', () => {
+      expect({}.sum()).to.deep.equal(0);
+    });
+    it('Should return zero when used on string', () => {
+      expect(''.sum()).to.deep.equal(0);
+    });
+    it('Should return the exacte same number when used on number', () => {
+      expect(''.sum()).to.deep.equal(0);
     });
   });
 });
