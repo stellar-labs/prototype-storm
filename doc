@@ -49,6 +49,27 @@ for(let prototype of explainations) {
         `);
     }
 
+    if( options.length > 0 ) {
+        options = `
+            <table class="table table-striped table-hover">
+                <thead>    
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${options.join('')}            
+                </tbody>
+            </table>
+        `;
+    }
+    else {
+        options = `No options available.`;
+    }
+
     prototypes.push(`
         <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-3">
             <div class="panel">
@@ -76,19 +97,7 @@ for(let prototype of explainations) {
                         <p>No note available.</p>
                     </div>                    
                     <div class="tab-item-content d-hide" id="${name}-options">
-                        <table class="table table-striped table-hover">
-                            <thead>    
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Name</th>
-                                    <th>Default</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${options.join('')}
-                            </tbody>
-                        </table>
+                        ${options}
                     </div>
                     <div class="tab-item-content d-hide" id="${name}-example">
                         ${examples.join('')}
