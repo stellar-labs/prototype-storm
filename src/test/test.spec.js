@@ -7,6 +7,7 @@ import '../js/empty.js';
 import '../js/sum.js';
 import '../js/json.js';
 import '../js/shuffle.js';
+import '../js/nl2br.js';
 describe('Prototype Storm', () => {
   describe('Average', () => {
     it('Should return the average of an array', () => {
@@ -106,6 +107,17 @@ describe('Prototype Storm', () => {
     });
     it('Should return the indexes of the object', () => {
       expect({a: 1, b: 2, c: 3}.map((value, index) => index)).to.deep.equal(['a', 'b', 'c']);
+    });
+  });
+  describe('New line to HTML line break', () => {
+    it('Should return the string with HTML line break', () => {
+      expect('javascript\nphp\nruby'.nl2br()).to.deep.equal('javascript<br>php<br>ruby');
+    });
+    it('Should return the string with HTML line break when the strict mode is disabled', () => {
+      expect('javascript\nphp\nruby'.nl2br({strict: false})).to.deep.equal('javascript<br>php<br>ruby');
+    });
+    it('Should return the string with strict HTML line break when the strict mode is enabled', () => {
+      expect('javascript\nphp\nruby'.nl2br({strict: true})).to.deep.equal('javascript<br/>php<br/>ruby');
     });
   });
   describe('Shuffle', () => {
