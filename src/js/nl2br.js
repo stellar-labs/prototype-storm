@@ -5,6 +5,14 @@ export default (() => {
       if (this.constructor === String) {
         return this.replace(/\n|\r\n/gm, strict ? '<br/>' : '<br>');
       }
+      if (this.constructor === Array) {
+        return this.map(value => {
+          if (/\n|\r\n/.test(value)) {
+            return value.replace(/\n|\r\n/gm, strict ? '<br/>' : '<br>');
+          }
+          return value;
+        });
+      }
       return this;
     };
   }
