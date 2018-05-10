@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 
@@ -38,7 +39,7 @@ for(let prototype of explainations) {
         let name = param.name.replace(/^[\w]+\./, '<span class="text-secondary">$&</span>');
         let description = param.description;
         let defaultvalue = 'defaultvalue' in param ? param.defaultvalue : '';
-        
+
         options.push(`
             <tr>
                 <td>${type}</td>
@@ -80,7 +81,7 @@ for(let prototype of explainations) {
                     </div>
                     <div class="tab-item-content d-hide" id="${name}-options">
                         <table class="table table-striped table-hover">
-                            <thead>    
+                            <thead>
                                 <tr>
                                     <th>Type</th>
                                     <th>Name</th>
@@ -100,12 +101,12 @@ for(let prototype of explainations) {
                         <pre class="code" data-lang="html"><code class="html">&#60;script type="text/javascript" src="${links[0]}"&#62;&#60;/script&#62;</code></pre>
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">Copy CDN link&nbsp; <i class="icon-cloud-download"></i></button>
                         <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-social-github"></i></a>
                         <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-social-github"></i></a>
-                    </div>			    	
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +179,7 @@ let page = `
                     </div>
                     ${prototypes.join('')}
                 </div>
-            </div>	
+            </div>
             <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
             <!-- <script type="text/javascript" src="/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script> -->
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
