@@ -1,10 +1,12 @@
 const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 
+const files = fs.readdirSync('./src/js').map(function(file) {
+    return './src/js/' + file;
+});
+
 const explainations = jsdocApi.explainSync({
-    files: [
-        './first.js'
-    ]
+    files: files
 });
 
 let prototypes = [];
@@ -14,12 +16,10 @@ for(let prototype of explainations) {
         continue;
     }
 
-    console.log(prototype);
-
     let name = prototype.name;
     let returns = prototype.returns[0].type.names.join(' or ');
     let throws = prototype.exceptions;
-    let params = prototype.params;
+    let params = 'params' in prototype ? prototype.params : [];
     let summary = prototype.summary;
     let description = prototype.description;
     let start_line = prototype.meta.lineno;
@@ -190,7 +190,7 @@ let page = `
 `;
 
 try {
-    fs.writeFileSync('./docs/prototype-storm/index.html', new Buffer(page));
+    fs.writeFileSync('./docs/index.html', new Buffer(page));
 }
 catch( error ) {
     console.error(error);
