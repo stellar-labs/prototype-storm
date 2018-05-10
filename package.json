@@ -15,6 +15,7 @@
     "fancy-log": "1.*",
     "jsdoc": "^3.5.5",
     "jsdoc-api": "4.*",
+    "kebab-case": "1.*",
     "mocha": "^5.1.1",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3"
