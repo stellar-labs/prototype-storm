@@ -36,7 +36,7 @@ npm install --save prototype-storm@0.*
 
 Then, on your file, you can use:
 
-_Node < 8_
+_Regular Node import_
 
 ```javascript
 var prototypeStorm = require('prototype-storm');
