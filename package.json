@@ -26,8 +26,8 @@
     "build": "webpack --progress --display errors-only --config webpack/test.js && mocha && webpack --progress --display normal --optimize-minimize --config webpack/build.js",
     "test": "webpack --progress --display errors-only --config webpack/test.js && mocha",
     "eslint": "eslint --init",
-    "make:doc": "node make-doc",
-    "make:prototype": "node make-prototype"
+    "make:doc": "node command/make-doc",
+    "make:prototype": "node command/make-prototype"
   },
   "dependencies": {}
 }
