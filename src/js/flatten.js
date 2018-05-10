@@ -1,6 +1,16 @@
 'use strict';
 export default (() => {
   if ('flatten' in Object === false) {
+    /**
+     * @summary Returns a one dimensional array containing all the values of the element.
+     * @returns {Array}
+     * @example {a: 1, b: 2, c: 3}.flatten() // [1, 2, 3]
+     * @example [1, {a: 2, b: 3}].flatten() // [1, 2, 3]
+     * @since 0.1.0
+     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/flatten.min.js
+     * @see https://github.com/stellar-labs/prototype-storm/flatten.js
+     * @see https://github.com/stellar-labs/prototype-storm/test/flatten.js
+     */
     Object.prototype.flatten = function() {
       if (this.constructor === Object) {
         return Object.entries(this).reduce((accumulator, [key, value]) => {
