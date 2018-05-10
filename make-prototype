@@ -1,0 +1,128 @@
+const fs = require('fs');
+const fancyLog = require('fancy-log');
+const arguments = process.argv;
+const kebabCase = require('kebab-case');
+const readlineSync = require('readline-sync');
+const camelcase = require('camelcase');
+
+if( arguments.length !== 3 ) {
+    fancyLog.error('missing argument (usage: npm make:prototype <name>)');
+
+    return;
+}
+
+const name = arguments[2];
+const prototype_name = kebabCase(name).toLocaleLowerCase();
+const camelcased_name = camelcase(name);
+
+if( name !== prototype_name ) {
+    fancyLog.info('your prototype name will be changed from ' + name + ' to ' + prototype_name);
+    fancyLog.info('this is done to respect our file naming convention');
+}
+else {
+    fancyLog.info('about to create the prototype ' + prototype_name);
+}
+
+fancyLog.info('is it ok for you ?');
+
+const answer = readlineSync.question('');
+
+if( answer.toLocaleLowerCase().startsWith('y') === false ) {
+    fancyLog.info('ok then, see you later');
+
+    return;
+}
+
+if( fs.existsSync('./src/js/' + prototype_name + '.js') === true ) {
+    fancyLog.error(prototype_name + '.js already exists');
+
+    return;
+}
+
+let code = `'use strict';
+
+if( '` + camelcased_name + `' in Object.prototype === false ) {
+    /**
+     * @summary [[ FILL ME ]]
+     * @returns [[ FILLE ME ]]
+     * @example [[FILL ME]]
+     * @since [[ VERSION HERE ]]
+     * @see https://github.com/stellar-labs/prototype-storm/v[[ VERSION HERE ]]/` + prototype_name + `.min.js
+     * @see https://github.com/stellar-labs/prototype-storm/` + prototype_name + `.js
+     * @see https://github.com/stellar-labs/prototype-storm/test/` + prototype_name + `.js
+     */ 
+    Object.prototype.` + camelcased_name + ` = function() {
+        // Array
+        if( this.constructor === Array ) {
+            // ...
+        }
+
+        // Boolean
+        if( this.constructor === Boolean ) {
+            // ...
+        }
+
+        // Date
+        if( this.constructor === Date ) {
+            // ...
+        }
+
+        // Number
+        if( this.constructor === Number ) {
+            // ...
+        }
+
+        // Object
+        if( this.constructor === Object ) {
+            // ...
+        }
+
+        // RegExp
+        if( this.constructor === RegExp ) {
+            // ...
+        }
+    };
+}
+
+export default Object.prototype.` + camelcased_name + `;`;
+
+try {
+    fs.writeFileSync('./src/js/' + prototype_name + '.js', new Buffer(code));
+}
+catch( error ) {
+    fancyLog.error('could not create the prototype file ' + prototype_name + '.js (detail: ' + error + ')');
+
+    return;
+}
+
+fancyLog.info('created the prototype file ' + prototype_name + '.js');
+
+code = `/**
+ * @see http://www.chaijs.com/guide/styles/#should
+ */
+
+'use strict';
+
+const should = require('chai').should();
+
+import '../src/js/` + prototype_name + `.js';
+
+describe('` + prototype_name + `', function() {
+    describe('it should exists', function() {
+        should.exists(Object.prototype.` + camelcased_name + `);
+    });
+
+    // ...
+});
+`;
+
+try {
+    fs.writeFileSync('./test/' + prototype_name + '.js', new Buffer(code));
+}
+catch( error ) {
+    fancyLog.error('could not create the test file test/' + prototype_name + '.js');
+
+    return;
+}
+
+fancyLog.info('prototype ready, have fun!');
