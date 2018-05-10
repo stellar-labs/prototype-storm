@@ -27,7 +27,8 @@
     "test": "webpack --progress --display errors-only --config webpack/test.js && mocha",
     "eslint": "eslint --init",
     "make:doc": "node command/make-doc",
-    "make:prototype": "node command/make-prototype"
+    "make:prototype": "node command/make-prototype",
+    "remove:prototype": "node command/remove-prototype"
   },
   "dependencies": {}
 }

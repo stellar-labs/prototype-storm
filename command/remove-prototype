@@ -1,0 +1,45 @@
+const fs = require('fs');
+const fancyLog = require('fancy-log');
+const kebabCase = require('kebab-case');
+const readlineSync = require('readline-sync');
+const arguments = process.argv;
+
+if( arguments.length !== 3 ) {
+    fancyLog.error('missing argument (usage: npm remove:prototype <name>)');
+
+    return;
+}
+
+const name = process.argv[2];
+const prototype_name = kebabCase(name);
+
+fancyLog.info('about to search and remove ' + prototype_name + '.js from source and test folders');
+fancyLog.info('are you sure to do this?');
+
+const answer = readlineSync.question('');
+
+if( answer.toLocaleLowerCase().startsWith('y') === false ) {
+    fancyLog.info('ok then, we do nothing');
+
+    return;
+}
+
+fs.unlink('./src/js/' + prototype_name + '.js', function( error ) {
+    if( error ) {
+        fancyLog.error('could not remove the source file');
+
+        throw error;
+    }
+    
+    fancyLog.info('the source file has been removed');
+});
+
+fs.unlink('./test/' + prototype_name + '.js', function( error ) {
+    if( error ) {
+        fancyLog.error('could not remove the test file');
+
+        throw error;
+    }
+
+    fancyLog.info('the test file has been removed');
+});
