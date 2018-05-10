@@ -119,6 +119,33 @@ describe('Prototype Storm', () => {
     it('Should return the string with strict HTML line break when the strict mode is enabled', () => {
       expect('javascript\nphp\nruby'.nl2br({strict: true})).to.deep.equal('javascript<br/>php<br/>ruby');
     });
+    it('Should return the string without HTML line break', () => {
+      expect('javascript'.nl2br()).to.deep.equal('javascript');
+    });
+    it('Should return the string without HTML line break when the strict mode is disabled', () => {
+      expect('javascript'.nl2br({strict: false})).to.deep.equal('javascript');
+    });
+    it('Should return the string without strict HTML line break when the strict mode is enabled', () => {
+      expect('javascript'.nl2br({strict: true})).to.deep.equal('javascript');
+    });
+    it('Should return the array with HTML line break', () => {
+      expect(['javascript', '\n', 'php', '\n', 'ruby'].nl2br()).to.deep.equal(['javascript', '<br>', 'php', '<br>', 'ruby']);
+    });
+    it('Should return the array with HTML line break when the strict mode is disabled', () => {
+      expect(['javascript', '\n', 'php', '\n', 'ruby'].nl2br({strict: false})).to.deep.equal(['javascript', '<br>', 'php', '<br>', 'ruby']);
+    });
+    it('Should return the array with strict HTML line break when the strict mode is enabled', () => {
+      expect(['javascript', '\n', 'php', '\n', 'ruby'].nl2br({strict: true})).to.deep.equal(['javascript', '<br/>', 'php', '<br/>', 'ruby']);
+    });
+    it('Should return the array without HTML line break', () => {
+      expect(['javascript'].nl2br()).to.deep.equal(['javascript']);
+    });
+    it('Should return the array without HTML line break when the strict mode is disabled', () => {
+      expect(['javascript'].nl2br({strict: false})).to.deep.equal(['javascript']);
+    });
+    it('Should return the array without strict HTML line break when the strict mode is enabled', () => {
+      expect(['javascript'].nl2br({strict: true})).to.deep.equal(['javascript']);
+    });
   });
   describe('Shuffle', () => {
     it('Should return the array randomized', () => {
