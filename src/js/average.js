@@ -2,10 +2,11 @@
 export default (() => {
   Object.prototype.average = function() {
     if (this.constructor === Array) {
-      return this.filter(value => !isNaN(Number(value))).reduce((sum, current) => {
-        return sum + current;
-      }, 0);
+      if (this.length === 0) return 0;
+      const numbers = this.filter(value => !isNaN(Number(value)));
+      return numbers.reduce((sum, current) => sum + current, 0) / (numbers.length|1);
     }
-    return;
+    if (this.constructor === Number) return this;
+    return 0;
   };
 })();
