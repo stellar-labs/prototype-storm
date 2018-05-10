@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 
@@ -39,7 +40,7 @@ for(let prototype of explainations) {
         let name = param.name.replace(/^[\w]+\./, '<span class="text-secondary">$&</span>');
         let description = param.description;
         let defaultvalue = 'defaultvalue' in param ? param.defaultvalue : '';
-        
+
         options.push(`
             <tr>
                 <td>${type}</td>
@@ -107,12 +108,12 @@ for(let prototype of explainations) {
                         ${examples.join('')}
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
-                    </div>			    	
+                    </div>	
                 </div>
             </div>
         </div>
@@ -183,7 +184,7 @@ let page = `
                     </div>
                     ${prototypes.join('')}
                 </div>
-            </div>	
+            </div>
             <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>

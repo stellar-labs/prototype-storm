@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 module.exports = {
+  target: 'node',
   mode: 'production',
   entry: Object.assign({
     'prototype-storm': fs.readdirSync(path.resolve(__dirname, '..', 'src', 'js')).map(filename => {
