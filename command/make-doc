@@ -12,7 +12,6 @@ const explainations = jsdocApi.explainSync({
 });
 
 let prototypes = [];
-let count = 0;
 
 for(let prototype of explainations) {
     if( prototype.undocumented === true || prototype.kind === 'package' ) {
