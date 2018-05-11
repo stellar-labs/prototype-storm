@@ -51,3 +51,9 @@ a:focus {
 .tab-item-content {
 	padding-top: 20px;
 }
+
+/* Overrides */
+
+.panel {
+	margin-bottom: .8rem;
+}
