@@ -86,6 +86,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-item-content" id="average-description">
+                        <div><br /></div>
                         <div class="h5">Returns</div>    
                         <p>Number</p>
                     </div>                    
@@ -100,12 +101,90 @@
         
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/average.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/test/average.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
-                    </div>			    	
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="ellipsis">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#ellipsis" class="h5">#</a>
+                        <span class="text-bold"><strong>ellipsis</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Cap a string by a max character length and an ellipsis character.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="ellipsis-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="ellipsis-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="ellipsis-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="ellipsis-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>String</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="ellipsis-options">
+                        
+            <table class="table table-scroll table-striped table-hover">
+                <thead>    
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td>Integer</td>
+                <td><span class="text-secondary">options.</span>max</td>
+                <td>0</td>
+                <td>maximum of character until it should append an ellipsis</td>
+            </tr>
+        
+            <tr>
+                <td>String</td>
+                <td><span class="text-secondary">otpions.</span>end</td>
+                <td>"..."</td>
+                <td>ellipsis character to display if the max character is reached</td>
+            </tr>
+        
+                </tbody>
+            </table>
+        
+                    </div>
+                    <div class="tab-item-content d-hide" id="ellipsis-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">"hello world".ellipsis({ max: 5 }) // hello...</code></pre>
+        
+            <pre class="code" data-lang="javascript"><code class="javascript">"hello universe".ellipsis({ max: 5, end: '! }) // "hello!"</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/ellipsis.js#L17" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/ellipsis.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
                 </div>
             </div>
         </div>
@@ -135,6 +214,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-item-content" id="empty-description">
+                        <div><br /></div>
                         <div class="h5">Returns</div>    
                         <p>Boolean</p>
                     </div>                    
@@ -155,12 +235,12 @@
         
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/empty.js#L17" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/test/empty.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
-                    </div>			    	
+                    </div>	
                 </div>
             </div>
         </div>
@@ -190,6 +270,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-item-content" id="flatten-description">
+                        <div><br /></div>
                         <div class="h5">Returns</div>    
                         <p>Array</p>
                     </div>                    
@@ -204,12 +285,206 @@
         
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/flatten.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/test/flatten.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
-                    </div>			    	
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="format">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#format" class="h5">#</a>
+                        <span class="text-bold"><strong>format</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Return the formated element.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="format-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="format-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="format-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="format-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>String</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="format-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="format-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">"Hi {name}".format({ name: "John" }) // "Hi John"</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/format.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/format.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="isArray">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#isArray" class="h5">#</a>
+                        <span class="text-bold"><strong>isArray</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Return true if the element is an array.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="isArray-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="isArray-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="isArray-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="isArray-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>Boolean</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="isArray-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="isArray-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">new Date().isArray() // false</code></pre>
+        
+            <pre class="code" data-lang="javascript"><code class="javascript">[].isArray() // true</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/is-array.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/is-array.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="json">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#json" class="h5">#</a>
+                        <span class="text-bold"><strong>json</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Returns the string representation of the variable turned into JSON</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="json-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="json-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="json-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="json-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>String</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="json-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="json-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">{name: "John"}.json() // {"name": "John"}</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/json.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/json.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="last">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#last" class="h5">#</a>
+                        <span class="text-bold"><strong>last</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Returns the last element of the variable</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="last-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="last-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="last-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="last-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>*</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="last-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="last-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].last() // 3</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/last.js#L15" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/last.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
                 </div>
             </div>
         </div>
@@ -239,6 +514,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-item-content" id="map-description">
+                        <div><br /></div>
                         <div class="h5">Returns</div>    
                         <p>undefined</p>
                     </div>                    
@@ -272,18 +548,256 @@
         
                     </div>
                 </div>
-                <div class="panel-footer">	
+                <div class="panel-footer">
                     <div class="btn-group float-right">
                         <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/map.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/test/map.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
-                    </div>			    	
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="nl2br">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#nl2br" class="h5">#</a>
+                        <span class="text-bold"><strong>nl2br</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Turns any line return into HTML line return <br /></p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="nl2br-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="nl2br-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="nl2br-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="nl2br-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>*</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="nl2br-options">
+                        
+            <table class="table table-scroll table-striped table-hover">
+                <thead>    
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td>Boolean</td>
+                <td><span class="text-secondary">options.</span>strict</td>
+                <td>false</td>
+                <td>when set to true, it will output strict HTML <br /> tag</td>
+            </tr>
+        
+                </tbody>
+            </table>
+        
+                    </div>
+                    <div class="tab-item-content d-hide" id="nl2br-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">"hello\r\nworld".nl2br() // "hello<br />world"</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/nl2br.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/nl2br.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="pass">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#pass" class="h5">#</a>
+                        <span class="text-bold"><strong>pass</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Returns true if the element passes the regexp check.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="pass-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="pass-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="pass-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="pass-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>Boolean</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="pass-options">
+                        
+            <table class="table table-scroll table-striped table-hover">
+                <thead>    
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <td>RegExp</td>
+                <td><span class="text-secondary">options.</span>regexp</td>
+                <td>/(?:)/</td>
+                <td>regular expression to test</td>
+            </tr>
+        
+                </tbody>
+            </table>
+        
+                    </div>
+                    <div class="tab-item-content d-hide" id="pass-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">"hello".pass(/[a-z]/g) // true</code></pre>
+        
+            <pre class="code" data-lang="javascript"><code class="javascript">Number(34).pass(/^[3]/) // true</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test.js#L15" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/test.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="shuffle">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#shuffle" class="h5">#</a>
+                        <span class="text-bold"><strong>shuffle</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Disorder the elements randomly.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="shuffle-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="shuffle-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="shuffle-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="shuffle-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>*</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="shuffle-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="shuffle-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].shuffle() // [3, 1, 2]</code></pre>
+        
+            <pre class="code" data-lang="javascript"><code class="javascript">"hello world".shuffle() // "lohel"</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/shuffle.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/shuffle.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+            <div class="panel" id="sum">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <a href="#sum" class="h5">#</a>
+                        <span class="text-bold"><strong>sum</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p>Returns the sum of the elements.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="sum-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="sum-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="sum-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-item-content" id="sum-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>Number</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="sum-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="sum-example">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].sum() // 6</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/sum.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/test/sum.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
                 </div>
             </div>
         </div>
     
                 </div>
-            </div>	
+            </div>
             <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
