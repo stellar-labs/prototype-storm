@@ -114,7 +114,7 @@ import '../src/js/` + prototype_name + `.js';
 
 describe('` + prototype_name + `', function() {
     describe('it should exists', function() {
-        should.exists(Object.prototype.` + camelcased_name + `);
+        should.exist(Object.prototype.` + camelcased_name + `);
     });
 
     // ...
