@@ -81,6 +81,11 @@ if( '` + camelcased_name + `' in Object.prototype === false ) {
         if( this.constructor === RegExp ) {
             // ...
         }
+
+        // String
+        if( this.constructor === String ) {
+            // ...
+        }
     };
 }
 
