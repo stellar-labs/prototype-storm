@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
+const fancyLog = require('fancy-log');
 
 const files = fs.readdirSync('./src/js').map(function(file) {
     return './src/js/' + file;
@@ -11,6 +12,7 @@ const explainations = jsdocApi.explainSync({
 });
 
 let prototypes = [];
+let count = 0;
 
 for(let prototype of explainations) {
     if( prototype.undocumented === true || prototype.kind === 'package' ) {
@@ -18,6 +20,14 @@ for(let prototype of explainations) {
     }
 
     let name = prototype.name;
+
+    if( 'returns' in prototype === false ) {
+        fancyLog.warn('the prototype ' + name + '.js is missing a @returns doc');
+        fancyLog.warn('skipping this prototype');
+
+        continue;
+    }
+
     let returns = prototype.returns[0].type.names.join(' or ');
     let throws = prototype.exceptions;
     let params = 'params' in prototype ? prototype.params : [];
@@ -98,6 +108,7 @@ for(let prototype of explainations) {
                 </div>
                 <div class="panel-body">
                     <div class="tab-item-content" id="${name}-description">
+                        <div><br /></div>
                         <div class="h5">Returns</div>    
                         <p>${returns}</p>
                     </div>                    
@@ -110,7 +121,7 @@ for(let prototype of explainations) {
                 </div>
                 <div class="panel-footer">
                     <div class="btn-group float-right">
-                        <button class="btn btn-primary">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <button class="btn btn-primary cdn" data-url="${links[0]}">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
                     </div>	
@@ -118,6 +129,8 @@ for(let prototype of explainations) {
             </div>
         </div>
     `);
+
+    fancyLog.info('generated documentation for ' + name + '.js');
 }
 
 let page = `
