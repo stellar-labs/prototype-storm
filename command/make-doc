@@ -165,7 +165,7 @@ let page = `
                             </li>
                         </ul>
                     </div>
-                    <a href="/" class="navbar-brand mr-2 text-uppercase">
+                    <a href="/prototype-storm" class="navbar-brand mr-2 text-uppercase">
                         Prototype Storm
                     </a>
                     <a href="/prototype-storm/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
