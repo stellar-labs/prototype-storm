@@ -1,6 +1,16 @@
 'use strict';
 export default (() => {
   if ('shuffle' in Object === false) {
+    /**
+     * @summary Disorder the elements randomly.
+     * @return {*}
+     * @example [1, 2, 3].shuffle() // [3, 1, 2]
+     * @example "hello world".shuffle() // "lohel"
+     * @since 0.1.0
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/v0.1.0/dist/shuffle.js
+     * @see https://github.com/stellar-labs/prototype-storm/shuffle.js
+     * @see https://github.com/stellar-labs/prototype-storm/test/shuffle.js
+     */
     Object.prototype.shuffle = function() {
       if (this.constructor === Array) {
         return this.reduce((accumulator, current, index) => {
