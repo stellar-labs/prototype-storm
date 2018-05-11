@@ -23,6 +23,16 @@ Supercharge your Javascript!
 - [NPM](#npm)
 
 ### Web
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <script src='https://rawgit.com/stellar-labs/master/dist/prototype-storm.min.js' defer></script>
+  </head>
+  <body></body>
+</html>
+```
 
 Use any of the CDN available [on the documentation](https://stellar-labs.github.io/prototype-storm) to use them on your web app.
 
@@ -30,22 +40,14 @@ Use any of the CDN available [on the documentation](https://stellar-labs.github.
 
 First, run:
 
-```bash
-npm install --save prototype-storm@0.*
+```shell
+$ npm install --save prototype-storm@0.* # npm
+$ yarn add prototype-storm@0.* # Yarn
 ```
 
 Then, on your file, you can use:
 
-_Regular Node import_
-
 ```javascript
-var prototypeStorm = require('prototype-storm');
-```
-
-_ES6 module_
-
-```javascript
-import 'prototype-storm';
-import prototypeStorm from 'prototype-storm';
-import { first, empty } from 'prototype-storm';
+require('prototype-storm'); // CommonJS
+import 'prototype-storm'; // ES Modules
 ```
