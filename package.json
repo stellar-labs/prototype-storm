@@ -28,7 +28,8 @@
     "eslint": "eslint --init",
     "make:doc": "node command/make-doc",
     "make:prototype": "node command/make-prototype",
-    "remove:prototype": "node command/remove-prototype"
+    "remove:prototype": "node command/remove-prototype",
+    "test:file": "mocha --require babel-core/register"
   },
   "dependencies": {}
 }
