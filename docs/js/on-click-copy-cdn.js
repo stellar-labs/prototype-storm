@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const url = this.dataset.url;
             let text = '<script type="text/javascript" src="' + url + '"><\/script>';
 
-            copyToClipboard(text);                 
+            copyToClipboard(text);     
+            displayToast('#toast', 'icon-docs', 'CDN link copyied');            
         });
     }
 });
