@@ -7,7 +7,7 @@ export default (() => {
      * @param {Integer} options.max=0 maximum of character until it should append an ellipsis
      * @param {String} otpions.end="..." ellipsis character to display if the max character is reached
      * @returns {String}
-     * @example "hello world".ellipsis({ max: 5 }) // hello...
+     * @example "hello world".ellipsis({ max: 5 }) // "hello.."
      * @example "hello universe".ellipsis({ max: 5, end: '!' }) // "hello!"
      * @since 0.1.0
      * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/ellipsis.min.js
