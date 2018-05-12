@@ -47,7 +47,7 @@ if( '` + camelcased_name + `' in Object.prototype === false ) {
      * @returns [[ FILLE ME ]]
      * @example [[FILL ME]]
      * @since [[ VERSION HERE ]]
-     * @see https://rawgit.com/stellar-labs/prototype-storm/master/dist/` + prototype_name + `.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/` + prototype_name + `.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/` + prototype_name + `.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/` + prototype_name + `.js
      */ 
