@@ -236,6 +236,9 @@ let page = `
                     ${prototypes.join('')}
                 </div>
             </div>
+            <div id="toast" class="toast toast-primary">
+                <i class=""></i>&nbsp; <span></span>
+            </div>
             <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
