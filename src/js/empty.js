@@ -11,8 +11,8 @@ export default (() => {
      * @example new Regexp('').empty() // true
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/empty.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/empty.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/empty.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/empty.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/empty.js
      */
     Object.prototype.empty = function() {
       if (this.constructor === Object) {

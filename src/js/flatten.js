@@ -8,8 +8,8 @@ export default (() => {
      * @example [1, {a: 2, b: 3}].flatten() // [1, 2, 3]
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/flatten.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/flatten.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/flatten.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/flatten.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/flatten.js
      */
     Object.prototype.flatten = function() {
       if (this.constructor === Object) {

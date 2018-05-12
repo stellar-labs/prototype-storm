@@ -8,8 +8,8 @@ if( 'isArray' in Object.prototype === false ) {
      * @example [].isArray() // true
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/is-array.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/is-array.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/is-array.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/is-array.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/is-array.js
      */ 
     Object.prototype.isArray = function() {
         // Array

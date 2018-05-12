@@ -11,8 +11,8 @@ export default (() => {
      * @example "hello universe".ellipsis({ max: 5, end: '! }) // "hello!"
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/ellipsis.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/ellipsis.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/ellipsis.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/ellipsis.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/ellipsis.js
      */
     Object.prototype.ellipsis = function({max = 0, end = '...'} = {}) {
       if (this.constructor === String ) {

@@ -7,8 +7,8 @@ export default (() => {
    * @example {a: 1, b: 2, c: 3}.average() // 6
    * @since 0.1.0
    * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/v0.1.0/dist/average.js
-   * @see https://github.com/stellar-labs/prototype-storm/average.js
-   * @see https://github.com/stellar-labs/prototype-storm/test/average.js
+   * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/average.js
+   * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/average.js
    */
   Object.prototype.average = function() {
     if (this.constructor === Array) {

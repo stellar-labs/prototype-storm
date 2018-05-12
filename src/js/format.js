@@ -7,8 +7,8 @@ if( 'format' in Object.prototype === false ) {
      * @example "Hi {name}".format({ name: "John" }) // "Hi John"
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/format.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/format.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/format.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/format.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/format.js
      */ 
     Object.prototype.format = function(options = {}) {
         // Array

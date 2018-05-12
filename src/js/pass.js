@@ -9,8 +9,8 @@ if( 'pass' in Object.prototype === false ) {
      * @example Number(34).pass(/^[3]/) // true
      * @since 0.1.0
      * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/test.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/test.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/test.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/test.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/test.js
      */ 
     Object.prototype.pass = function(options = { regexp: /(?:)/ }) {
         // Array
