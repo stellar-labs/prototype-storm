@@ -57,3 +57,7 @@ a:focus {
 .panel {
 	margin-bottom: .8rem;
 }
+
+.btn-menu {
+	padding-left: 0px;
+}

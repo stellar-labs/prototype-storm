@@ -154,7 +154,7 @@ let page = `
             <header class="navbar">
                 <section class="navbar-section">
                     <div class="dropdown">
-                        <a class="btn btn-link dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
+                        <a class="btn btn-link btn-menu dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
                         <ul class="menu">
                             <li class="menu-item">
                                 <a href="/prototype-storm/installation" disabled="true" tabindex="-1">Installation</a>
