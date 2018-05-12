@@ -48,8 +48,8 @@ if( '` + camelcased_name + `' in Object.prototype === false ) {
      * @example [[FILL ME]]
      * @since [[ VERSION HERE ]]
      * @see https://github.com/stellar-labs/prototype-storm/v[[ VERSION HERE ]]/` + prototype_name + `.min.js
-     * @see https://github.com/stellar-labs/prototype-storm/` + prototype_name + `.js
-     * @see https://github.com/stellar-labs/prototype-storm/test/` + prototype_name + `.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/` + prototype_name + `.js
+     * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/` + prototype_name + `.js
      */ 
     Object.prototype.` + camelcased_name + ` = function() {
         // Array
