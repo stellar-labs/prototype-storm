@@ -6,7 +6,7 @@ export default (() => {
      * @returns {Number}
      * @example [1, 2, 3].sum() // 6
      * @since 0.1.0
-     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/v0.1.0/dist/sum.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/sum.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/sum.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/sum.js
      */

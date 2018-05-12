@@ -6,7 +6,7 @@ if( 'format' in Object.prototype === false ) {
      * @returns {String}
      * @example "Hi {name}".format({ name: "John" }) // "Hi John"
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/format.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/format.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/format.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/format.js
      */ 

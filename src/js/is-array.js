@@ -7,7 +7,7 @@ if( 'isArray' in Object.prototype === false ) {
      * @example new Date().isArray() // false
      * @example [].isArray() // true
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/is-array.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/is-array.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/is-array.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/is-array.js
      */ 

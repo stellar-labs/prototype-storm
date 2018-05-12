@@ -8,7 +8,7 @@ if( 'pass' in Object.prototype === false ) {
      * @example "hello".pass(/[a-z]/g) // true
      * @example Number(34).pass(/^[3]/) // true
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/test.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/test.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/test.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/test.js
      */ 

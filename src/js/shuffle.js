@@ -7,7 +7,7 @@ export default (() => {
      * @example [1, 2, 3].shuffle() // [3, 1, 2]
      * @example "hello world".shuffle() // "lohel"
      * @since 0.1.0
-     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/v0.1.0/dist/shuffle.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/shuffle.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/shuffle.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/shuffle.js
      */

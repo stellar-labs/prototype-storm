@@ -7,7 +7,7 @@ export default (() => {
      * @return {undefined}
      * @example {a: 1, b: 2, c: 3}.map(myFunction())
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/map.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/map.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/map.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/map.js
      */

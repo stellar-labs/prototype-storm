@@ -10,7 +10,7 @@ export default (() => {
      * @example "hello world".ellipsis({ max: 5 }) // hello...
      * @example "hello universe".ellipsis({ max: 5, end: '! }) // "hello!"
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/ellipsis.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/ellipsis.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/ellipsis.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/ellipsis.js
      */

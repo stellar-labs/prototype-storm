@@ -10,7 +10,7 @@ export default (() => {
      * @example 0.empty() // true
      * @example new Regexp('').empty() // true
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/empty.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/empty.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/empty.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/empty.js
      */

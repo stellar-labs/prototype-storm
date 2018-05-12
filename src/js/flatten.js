@@ -7,7 +7,7 @@ export default (() => {
      * @example {a: 1, b: 2, c: 3}.flatten() // [1, 2, 3]
      * @example [1, {a: 2, b: 3}].flatten() // [1, 2, 3]
      * @since 0.1.0
-     * @see https://github.com/stellar-labs/prototype-storm/v0.1.0/dist/flatten.min.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/flatten.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/flatten.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/flatten.js
      */

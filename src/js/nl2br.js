@@ -7,7 +7,7 @@ export default (() => {
      * @returns {*}
      * @example "hello\r\nworld".nl2br() // "hello<br />world"
      * @since 0.1.0
-     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/v0.1.0/dist/nl2br.js
+     * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/nl2br.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/nl2br.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/nl2br.js
      */
