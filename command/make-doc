@@ -87,10 +87,10 @@ for(let prototype of explainations) {
 
     prototypes.push(`
         <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
-            <div itemprop="codeSampleType">full solution</div>
-            <div itemprop="programmingLanguage">javascript</div>
-            <div itemprop="runtimePlatform">web</div>
-            <div itemprop="codeRepository">${links[1]}#L${start_line}</div>
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">${links[1]}#L${start_line}</div>
             <div class="panel" id="${name}">
                 <div class="panel-header">
                     <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
