@@ -228,7 +228,7 @@ let page = `
                     </div>
                     <div class="column col-12">
                         <br />
-                        <input class="form-input" type="text" placeholder="search">
+                        <input id="search" class="form-input" type="text" placeholder="search">
                         <br />
                     </div>
                     <div>
@@ -239,6 +239,7 @@ let page = `
             <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
+            <script type="text/javascript" src="/prototype-storm/js/filter-prototypes.js"></script>
         </body>
     </html>
 `;
