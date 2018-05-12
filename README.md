@@ -8,7 +8,7 @@ Supercharge your Javascript!
 
 ```javascript
 [1, 2, 3, 4].first({ count: 2 }) // [1, 2]
-    .whereGreater({ to: 0 }) // [1, 2]
+    .whereGreater({ than: 0 }) // [1, 2]
     .last(); // 2
 ```
 
