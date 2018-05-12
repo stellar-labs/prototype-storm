@@ -3,6 +3,7 @@ const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 const fancyLog = require('fancy-log');
 const sentenceCase = require('sentence-case');
+const moment = require('moment');
 
 const files = fs.readdirSync('./src/js').map(function(file) {
     return './src/js/' + file;
@@ -249,11 +250,12 @@ catch( error ) {
     fancyLog.error('unable to save the documentation (detail: ' + error + ')');
 }
 
+const sitemap_last_mod = moment().format('YYYY-MM-DD');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
         <loc>https://stellar-labs.github.io/prototype-storm</loc>
-        <lastmod>${now}</lastmod>
+        <lastmod>${sitemap_last_mod}</lastmod>
    </url>
 </urlset>`;
 
