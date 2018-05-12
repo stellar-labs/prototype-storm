@@ -2,6 +2,7 @@
 const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 const fancyLog = require('fancy-log');
+const sentenceCase = require('sentence-case');
 
 const files = fs.readdirSync('./src/js').map(function(file) {
     return './src/js/' + file;
@@ -12,6 +13,7 @@ const explainations = jsdocApi.explainSync({
 });
 
 let prototypes = [];
+let meta_keywords = [];
 
 for(let prototype of explainations) {
     if( prototype.undocumented === true || prototype.kind === 'package' ) {
@@ -19,6 +21,8 @@ for(let prototype of explainations) {
     }
 
     let name = prototype.name;
+
+    meta_keywords.push(sentenceCase(name).toLocaleLowerCase());
 
     if( 'returns' in prototype === false ) {
         fancyLog.warn('the prototype ' + name + '.js is missing a @returns doc');
@@ -82,14 +86,18 @@ for(let prototype of explainations) {
     }
 
     prototypes.push(`
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div itemprop="codeSampleType">full solution</div>
+            <div itemprop="programmingLanguage">javascript</div>
+            <div itemprop="runtimePlatform">web</div>
+            <div itemprop="codeRepository">${links[1]}#L${start_line}</div>
             <div class="panel" id="${name}">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#${name}" class="h5">#</a>
-                        <span class="text-bold"><strong>${name}</strong></span>
+                        <span class="text-bold"><strong itemprop="name">${name}</strong></span>
                         <span class="chip float-right">≥ ${since}</span>
-                        <p>${summary}</p>
+                        <p itemprop="description">${summary}</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -105,7 +113,7 @@ for(let prototype of explainations) {
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="${name}-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -114,7 +122,7 @@ for(let prototype of explainations) {
                     <div class="tab-item-content d-hide" id="${name}-options">
                         ${options}
                     </div>
-                    <div class="tab-item-content d-hide" id="${name}-example">
+                    <div class="tab-item-content d-hide" id="${name}-example" itemprop="exampleOfWork">
                         ${examples.join('')}
                     </div>
                 </div>
@@ -132,14 +140,44 @@ for(let prototype of explainations) {
     fancyLog.info('generated documentation for ' + name + '.js');
 }
 
+const now = new Date();
+
+const meta_revised = new Intl.DateTimeFormat('en-US', {
+	weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric'
+}).format(now);
+
+const baseline = 'Supercharge your Javascript!';
+
 let page = `
     <!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="utf-8">
-            <meta name="description" content="Supercharge your Javascript!" />
+            <meta name="description" content="${baseline}" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <title>Prototype Storm - Supercharge your Javascript!</title>
+            <meta name="keywords" content="${meta_keywords.join(',')}" />
+            <meta name="subject" content="Javascript prototypes to help you code less, and better." />
+            <meta name="revised" content="${meta_revised}" />
+            <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
+            <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
+            <meta name="pagename" content="${baseline}" />
+            <meta name="coverage" content="Worldwide" />
+            <meta name="distribution" content="Global" />
+            <meta name="rating" content="General" />
+            <meta name="target" content="all" />
+            <meta name="HandheldFriendly" content="True" />
+            <meta name="date" content="${meta_revised}" />
+            <meta name="DC.title" content="${baseline}" />
+            <meta name="apple-mobile-web-app-title" content="Prototype Storm - ${baseline}">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-touch-fullscreen" content="yes" />
+            <title>Prototype Storm - ${baseline}</title> 
+            <link rel="canonical" href="https://stellar-labs.github.io/prototype-storm" />
             <link rel="stylesheet" type="text/css" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.eot">
@@ -208,5 +246,22 @@ try {
     fs.writeFileSync('./docs/index.html', new Buffer(page));
 }
 catch( error ) {
-    console.error(error);
+    fancyLog.error('unable to save the documentation (detail: ' + error + ')');
 }
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+        <loc>https://stellar-labs.github.io/prototype-storm</loc>
+        <lastmod>${now}</lastmod>
+   </url>
+</urlset>`;
+
+try {
+    fs.writeFileSync('./docs/sitemap.xml', new Buffer(sitemap));
+}
+catch( error ) {
+    fancyLog.error('unable to save the XML (detail: ' + error + ')');
+}
+
+fancyLog.info('updated the XML file');
