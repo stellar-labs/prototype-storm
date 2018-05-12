@@ -61,3 +61,19 @@ a:focus {
 .btn-menu {
 	padding-left: 0px;
 }
+
+.toast {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	transform: translateY(100%);
+	opacity: 0;
+	transition: all .3s;
+	z-index: 1;
+}
+
+.toast-appeared {
+	transform: translateY(0%);
+	opacity: 1;
+}
