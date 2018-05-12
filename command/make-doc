@@ -240,6 +240,8 @@ let page = `
             <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
             <script type="text/javascript" src="/prototype-storm/js/filter-prototypes.js"></script>
+            <script type="text/javascript" src="/prototype-storm/js/copy-to-clipboard.js"></script>
+            <script type="text/javascript" src="/prototype-storm/js/on-click-copy-cdn.js"></script>
         </body>
     </html>
 `;
