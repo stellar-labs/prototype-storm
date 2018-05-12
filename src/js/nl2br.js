@@ -3,7 +3,7 @@ export default (() => {
   if ('nl2br' in Object === false) {
     /**
      * @summary Turns any line return into HTML line return <br />
-     * @param {Boolean} options.strict=false when set to true, it will output strict HTML <br /> tag
+     * @param {Boolean} options.strict=false when set to true, it will output strict HTML tag
      * @returns {*}
      * @example "hello\r\nworld".nl2br() // "hello<br />world"
      * @since 0.1.0
