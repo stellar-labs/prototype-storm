@@ -5,7 +5,24 @@
             <meta charset="utf-8">
             <meta name="description" content="Supercharge your Javascript!" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <title>Prototype Storm - Supercharge your Javascript!</title>
+            <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,is array,json,last,map,nl2br,only,pass,replace all,shuffle,sum,type" />
+            <meta name="subject" content="Javascript prototypes to help you code less, and better." />
+            <meta name="revised" content="Saturday, May 12, 2018, 10:25 AM" />
+            <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
+            <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
+            <meta name="pagename" content="Supercharge your Javascript!" />
+            <meta name="coverage" content="Worldwide" />
+            <meta name="distribution" content="Global" />
+            <meta name="rating" content="General" />
+            <meta name="target" content="all" />
+            <meta name="HandheldFriendly" content="True" />
+            <meta name="date" content="Saturday, May 12, 2018, 10:25 AM" />
+            <meta name="DC.title" content="Supercharge your Javascript!" />
+            <meta name="apple-mobile-web-app-title" content="Prototype Storm - Supercharge your Javascript!">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-touch-fullscreen" content="yes" />
+            <title>Prototype Storm - Supercharge your Javascript!</title> 
+            <link rel="canonical" href="https://stellar-labs.github.io/prototype-storm" />
             <link rel="stylesheet" type="text/css" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.eot">
@@ -13,8 +30,8 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.ttf">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff2">
-            <link rel="stylesheet" type="text/css" href="/prototype-storm/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
-            <link rel="stylesheet" href="/prototype-storm/css/spectre-orange-theme.css" />
+            <link rel="stylesheet" type="text/css" href="/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
+            <link rel="stylesheet" href="/css/spectre-orange-theme.css" />
         </head>
         <body>
             <header class="navbar">
@@ -23,7 +40,7 @@
                         <a class="btn btn-link btn-menu dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="/prototype-storm/installation" disabled="true" tabindex="-1">Installation</a>
+                                <a href="/installation" disabled="true" tabindex="-1">Installation</a>
                             </li>
                             <li class="menu-item">
                                 <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
@@ -33,7 +50,7 @@
                     <a href="/prototype-storm" class="navbar-brand mr-2 text-uppercase">
                         Prototype Storm
                     </a>
-                    <a href="/prototype-storm/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
+                    <a href="/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
                     <a href="https://github.com/stellar-labs/prototype-storm" class="btn btn-link hide-sm">GitHub&nbsp; <i class="icon-social-github"></i></a>
                 </section>
                 <section class="navbar-section">
@@ -61,14 +78,18 @@
                     <div>
                     </div>
                     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/average.js#L13</div>
             <div class="panel" id="average">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#average" class="h5">#</a>
-                        <span class="text-bold"><strong>average</strong></span>
+                        <span class="text-bold"><strong itemprop="name">average</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Return the average of all the number elements.</p>
+                        <p itemprop="description">Return the average of all the number elements.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -84,7 +105,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="average-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -93,7 +114,7 @@
                     <div class="tab-item-content d-hide" id="average-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="average-example">
+                    <div class="tab-item-content d-hide" id="average-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].average() // 6</code></pre>
         
@@ -111,14 +132,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/ellipsis.js#L17</div>
             <div class="panel" id="ellipsis">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#ellipsis" class="h5">#</a>
-                        <span class="text-bold"><strong>ellipsis</strong></span>
+                        <span class="text-bold"><strong itemprop="name">ellipsis</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Cap a string by a max character length and an ellipsis character.</p>
+                        <p itemprop="description">Cap a string by a max character length and an ellipsis character.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -134,7 +159,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="ellipsis-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -171,7 +196,7 @@
             </table>
         
                     </div>
-                    <div class="tab-item-content d-hide" id="ellipsis-example">
+                    <div class="tab-item-content d-hide" id="ellipsis-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">"hello world".ellipsis({ max: 5 }) // hello...</code></pre>
         
@@ -189,14 +214,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/empty.js#L17</div>
             <div class="panel" id="empty">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#empty" class="h5">#</a>
-                        <span class="text-bold"><strong>empty</strong></span>
+                        <span class="text-bold"><strong itemprop="name">empty</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns true if the element is empty, else returns false.</p>
+                        <p itemprop="description">Returns true if the element is empty, else returns false.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -212,7 +241,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="empty-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -221,7 +250,7 @@
                     <div class="tab-item-content d-hide" id="empty-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="empty-example">
+                    <div class="tab-item-content d-hide" id="empty-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">{}.empty() // true</code></pre>
         
@@ -245,14 +274,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/flatten.js#L14</div>
             <div class="panel" id="flatten">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#flatten" class="h5">#</a>
-                        <span class="text-bold"><strong>flatten</strong></span>
+                        <span class="text-bold"><strong itemprop="name">flatten</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns a one dimensional array containing all the values of the element.</p>
+                        <p itemprop="description">Returns a one dimensional array containing all the values of the element.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -268,7 +301,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="flatten-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -277,7 +310,7 @@
                     <div class="tab-item-content d-hide" id="flatten-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="flatten-example">
+                    <div class="tab-item-content d-hide" id="flatten-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">{a: 1, b: 2, c: 3}.flatten() // [1, 2, 3]</code></pre>
         
@@ -295,14 +328,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/format.js#L13</div>
             <div class="panel" id="format">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#format" class="h5">#</a>
-                        <span class="text-bold"><strong>format</strong></span>
+                        <span class="text-bold"><strong itemprop="name">format</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Return the formated element.</p>
+                        <p itemprop="description">Return the formated element.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -318,7 +355,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="format-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -327,7 +364,7 @@
                     <div class="tab-item-content d-hide" id="format-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="format-example">
+                    <div class="tab-item-content d-hide" id="format-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">"Hi {name}".format({ name: "John" }) // "Hi John"</code></pre>
         
@@ -343,14 +380,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/is-array.js#L14</div>
             <div class="panel" id="isArray">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#isArray" class="h5">#</a>
-                        <span class="text-bold"><strong>isArray</strong></span>
+                        <span class="text-bold"><strong itemprop="name">isArray</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Return true if the element is an array.</p>
+                        <p itemprop="description">Return true if the element is an array.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -366,7 +407,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="isArray-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -375,7 +416,7 @@
                     <div class="tab-item-content d-hide" id="isArray-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="isArray-example">
+                    <div class="tab-item-content d-hide" id="isArray-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">new Date().isArray() // false</code></pre>
         
@@ -393,14 +434,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/json.js#L13</div>
             <div class="panel" id="json">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#json" class="h5">#</a>
-                        <span class="text-bold"><strong>json</strong></span>
+                        <span class="text-bold"><strong itemprop="name">json</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns the string representation of the variable turned into JSON</p>
+                        <p itemprop="description">Returns the string representation of the variable turned into JSON</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -416,7 +461,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="json-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -425,7 +470,7 @@
                     <div class="tab-item-content d-hide" id="json-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="json-example">
+                    <div class="tab-item-content d-hide" id="json-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">{name: "John"}.json() // {"name": "John"}</code></pre>
         
@@ -441,14 +486,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/last.js#L15</div>
             <div class="panel" id="last">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#last" class="h5">#</a>
-                        <span class="text-bold"><strong>last</strong></span>
+                        <span class="text-bold"><strong itemprop="name">last</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns the last element of the variable</p>
+                        <p itemprop="description">Returns the last element of the variable</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -464,7 +513,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="last-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -473,7 +522,7 @@
                     <div class="tab-item-content d-hide" id="last-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="last-example">
+                    <div class="tab-item-content d-hide" id="last-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].last() // 3</code></pre>
         
@@ -489,14 +538,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/map.js#L14</div>
             <div class="panel" id="map">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#map" class="h5">#</a>
-                        <span class="text-bold"><strong>map</strong></span>
+                        <span class="text-bold"><strong itemprop="name">map</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Execute a function for each key-pairs.</p>
+                        <p itemprop="description">Execute a function for each key-pairs.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -512,7 +565,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="map-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -542,7 +595,7 @@
             </table>
         
                     </div>
-                    <div class="tab-item-content d-hide" id="map-example">
+                    <div class="tab-item-content d-hide" id="map-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">{a: 1, b: 2, c: 3}.map(myFunction())</code></pre>
         
@@ -558,14 +611,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/nl2br.js#L14</div>
             <div class="panel" id="nl2br">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#nl2br" class="h5">#</a>
-                        <span class="text-bold"><strong>nl2br</strong></span>
+                        <span class="text-bold"><strong itemprop="name">nl2br</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Turns any line return into HTML line return <br /></p>
+                        <p itemprop="description">Turns any line return into HTML line return <br /></p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -581,7 +638,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="nl2br-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -611,9 +668,9 @@
             </table>
         
                     </div>
-                    <div class="tab-item-content d-hide" id="nl2br-example">
+                    <div class="tab-item-content d-hide" id="nl2br-example" itemprop="exampleOfWork">
                         
-            <pre class="code" data-lang="javascript"><code class="javascript">"hello\r\nworld".nl2br() // "hello<br />world"</code></pre>
+            <pre class="code" data-lang="javascript"><code class="javascript" style="white-space: nowrap;">"hello\r\nworld".nl2br() // "hello<br />world"</code></pre>
         
                     </div>
                 </div>
@@ -627,14 +684,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/test.js#L15</div>
             <div class="panel" id="pass">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#pass" class="h5">#</a>
-                        <span class="text-bold"><strong>pass</strong></span>
+                        <span class="text-bold"><strong itemprop="name">pass</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns true if the element passes the regexp check.</p>
+                        <p itemprop="description">Returns true if the element passes the regexp check.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -650,7 +711,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="pass-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -680,7 +741,7 @@
             </table>
         
                     </div>
-                    <div class="tab-item-content d-hide" id="pass-example">
+                    <div class="tab-item-content d-hide" id="pass-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">"hello".pass(/[a-z]/g) // true</code></pre>
         
@@ -698,14 +759,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/shuffle.js#L14</div>
             <div class="panel" id="shuffle">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#shuffle" class="h5">#</a>
-                        <span class="text-bold"><strong>shuffle</strong></span>
+                        <span class="text-bold"><strong itemprop="name">shuffle</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Disorder the elements randomly.</p>
+                        <p itemprop="description">Disorder the elements randomly.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -721,7 +786,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="shuffle-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -730,7 +795,7 @@
                     <div class="tab-item-content d-hide" id="shuffle-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="shuffle-example">
+                    <div class="tab-item-content d-hide" id="shuffle-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].shuffle() // [3, 1, 2]</code></pre>
         
@@ -748,14 +813,18 @@
             </div>
         </div>
     
-        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4">
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/sum.js#L13</div>
             <div class="panel" id="sum">
                 <div class="panel-header">
-                    <div class="panel-title">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#sum" class="h5">#</a>
-                        <span class="text-bold"><strong>sum</strong></span>
+                        <span class="text-bold"><strong itemprop="name">sum</strong></span>
                         <span class="chip float-right">≥ 0.1.0</span>
-                        <p>Returns the sum of the elements.</p>
+                        <p itemprop="description">Returns the sum of the elements.</p>
                     </div>
                 </div>
                 <div class="panel-nav">
@@ -771,7 +840,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
                     <div class="tab-item-content" id="sum-description">
                         <div><br /></div>
                         <div class="h5">Returns</div>    
@@ -780,7 +849,7 @@
                     <div class="tab-item-content d-hide" id="sum-options">
                         No options available.
                     </div>
-                    <div class="tab-item-content d-hide" id="sum-example">
+                    <div class="tab-item-content d-hide" id="sum-example" itemprop="exampleOfWork">
                         
             <pre class="code" data-lang="javascript"><code class="javascript">[1, 2, 3].sum() // 6</code></pre>
         
@@ -798,8 +867,8 @@
     
                 </div>
             </div>
-            <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
+            <script type="text/javascript" src="/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
+            <script type="text/javascript" src="/js/spectrecss-tabs.js"></script>
+            <script type="text/javascript" src="/js/highlightjs.js"></script>
         </body>
     </html>
