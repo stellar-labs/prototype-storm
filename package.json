@@ -19,6 +19,7 @@
     "kebab-case": "1.*",
     "mocha": "^5.1.1",
     "readline-sync": "1.*",
+    "sentence-case": "2.*",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3"
   },
