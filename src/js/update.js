@@ -24,7 +24,7 @@ if( 'update' in Object.prototype === false ) {
                     continue;
                 }
 
-                result[key] = values[key];
+                result[key] = value;
             }
 
             return result;
