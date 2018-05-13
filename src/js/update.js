@@ -7,7 +7,7 @@ if( 'update' in Object.prototype === false ) {
      * @example ({a: 1, b: 2}).update({ a: 3 }) // {a: 3, b: 2}
      * @example [1, 2, 3].update({ 0: 4 }) // [4, 2, 3]
      * @example "hello".update({ 0: 'y' }) // "yello"
-     * @since [[ VERSION HERE ]]
+     * @since 0.1.0
      * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/update.min.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/update.js
      * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/update.js
