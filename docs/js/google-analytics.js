@@ -1,11 +1,9 @@
-window.addEventListener('DOMContentLoaded', function() {
-    window.dataLayer = window.dataLayer || [];
-  
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    
-    gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-119139201-1');
-});
+function gtag() {
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'UA-119139201-1');
