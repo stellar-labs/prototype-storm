@@ -17,35 +17,7 @@ if( 'isArray' in Object.prototype === false ) {
             return true;
         }
 
-        // Boolean
-        if( this.constructor === Boolean ) {
-            return false;
-        }
-
-        // Date
-        if( this.constructor === Date ) {
-            return false;
-        }
-
-        // Number
-        if( this.constructor === Number ) {
-            return false;
-        }
-
-        // Object
-        if( this.constructor === Object ) {
-            return false;
-        }
-
-        // RegExp
-        if( this.constructor === RegExp ) {
-            return false;
-        }
-
-        // String
-        if( this.constructor === String ) {
-            return false;
-        }
+        return false;
     };
 }
 
