@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let text = '<script type="text/javascript" src="' + url + '"><\/script>';
 
             copyToClipboard(text);     
-            displayToast('#toast', 'icon-docs', 'CDN link copyied');            
+            displayToast('#toast', 'icon-docs', 'CDN link copied');            
         });
     }
 });
