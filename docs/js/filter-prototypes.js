@@ -13,7 +13,7 @@ function filterPrototypes( text ) {
         let name = panel.querySelector('[itemprop="name"]').innerHTML;
         let description = panel.querySelector('[itemprop="description"]').innerHTML;
 
-        if( name.includes(text) === false && description.includes(text) === false ) {
+        if( name.toLowerCase().includes(text.toLowerCase()) === false && description.toLocaleLowerCase().includes(text.toLowerCase()) === false ) {
             panel.classList.add(hide_element_class);
         }
         else {
