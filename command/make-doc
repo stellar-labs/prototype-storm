@@ -92,7 +92,7 @@ for(let prototype of explainations) {
             <div class="d-none" itemprop="programmingLanguage">javascript</div>
             <div class="d-none" itemprop="runtimePlatform">web</div>
             <div class="d-none" itemprop="codeRepository">${links[1]}#L${start_line}</div>
-            <div class="panel shadowed" id="${name}">
+            <div class="panel" id="${name}">
                 <div class="panel-header">
                     <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
                         <a href="#${name}" class="h5">#</a>
