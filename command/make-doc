@@ -188,6 +188,7 @@ let page = `
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff2">
             <link rel="stylesheet" type="text/css" href="/prototype-storm/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
             <link rel="stylesheet" href="/prototype-storm/css/spectre-orange-theme.css" />
+            <link rel="manifest" href="/manifest.webmanifest" />
         </head>
         <body>
             <header class="navbar">

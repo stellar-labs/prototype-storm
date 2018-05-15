@@ -1,0 +1,9 @@
+{
+    "name": "Prototype Storm",
+    "short_name": "ProtoStorm",
+    "start_url": "./",
+    "display": "standalone",
+    "related_applications": [{
+      "platform": "web"
+    }]
+  }
