@@ -7,7 +7,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,is array,is boolean,is date,is number,is object,is regexp,is string,json,keys,last,log,map,nl2br,only,pass,replace all,shuffle,sum,to kebab case,type,update,values" />
             <meta name="subject" content="Javascript prototypes to help you code less, and better." />
-            <meta name="revised" content="Tuesday, May 15, 2018, 11:48 PM" />
+            <meta name="revised" content="Wednesday, May 16, 2018, 12:03 AM" />
             <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="pagename" content="Supercharge your Javascript!" />
@@ -16,7 +16,7 @@
             <meta name="rating" content="General" />
             <meta name="target" content="all" />
             <meta name="HandheldFriendly" content="True" />
-            <meta name="date" content="Tuesday, May 15, 2018, 11:48 PM" />
+            <meta name="date" content="Wednesday, May 16, 2018, 12:03 AM" />
             <meta name="DC.title" content="Supercharge your Javascript!" />
             <meta name="apple-mobile-web-app-title" content="Prototype Storm - Supercharge your Javascript!">
             <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,8 @@
                 <section class="navbar-section">
                     <div class="input-group input-inline">
                         <div class="form-group">
-                            <select class="form-select">
+                            <label for="version" class="d-none">Version</label>
+                            <select class="form-select" id="version">
                                 <option>0.1.0</option>
                             </select>
                         </div>
@@ -72,6 +73,7 @@
                     </div>
                     <div class="column col-12">
                         <br />
+                        <label class="d-none" for="search">Search</label>
                         <input id="search" class="form-input" type="text" placeholder="search">
                         <br />
                     </div>

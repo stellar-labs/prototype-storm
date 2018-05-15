@@ -212,7 +212,8 @@ let page = `
                 <section class="navbar-section">
                     <div class="input-group input-inline">
                         <div class="form-group">
-                            <select class="form-select">
+                            <label for="version" class="d-none">Version</label>
+                            <select class="form-select" id="version">
                                 <option>0.1.0</option>
                             </select>
                         </div>
@@ -228,6 +229,7 @@ let page = `
                     </div>
                     <div class="column col-12">
                         <br />
+                        <label class="d-none" for="search">Search</label>
                         <input id="search" class="form-input" type="text" placeholder="search">
                         <br />
                     </div>
