@@ -212,8 +212,7 @@ let page = `
                 <section class="navbar-section">
                     <div class="input-group input-inline">
                         <div class="form-group">
-                            <label for="version" class="d-none">Version</label>
-                            <select class="form-select" id="version">
+                            <select class="form-select" aria-label="Version">
                                 <option>0.1.0</option>
                             </select>
                         </div>
@@ -229,8 +228,7 @@ let page = `
                     </div>
                     <div class="column col-12">
                         <br />
-                        <label class="d-none" for="search">Search</label>
-                        <input id="search" class="form-input" type="text" placeholder="search">
+                        <input id="search" class="form-input" type="text" placeholder="search" aria-label="Search">
                         <br />
                     </div>
                     <div>
