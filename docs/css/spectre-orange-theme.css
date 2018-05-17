@@ -59,6 +59,7 @@ a:focus {
 	top: 0 !important;
 	bottom: 0 !important; 
 	max-height: initial !important;
+	transform: initial;
 }
 
 /* Overrides */
