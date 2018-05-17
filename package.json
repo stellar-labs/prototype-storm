@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-hashsum": "^1.2.0",
     "gulp-rename": "^1.2.3",
+    "gulp-sri": "^0.3.1",
     "jsdoc": "^3.5.5",
     "jsdoc-api": "4.*",
     "kebab-case": "1.*",

@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
-const hashsum = require('gulp-hashsum');
+const sri = require('gulp-sri');
 const rename = require('gulp-rename');
 const fs = require('fs');
 
@@ -11,10 +11,11 @@ gulp.task('hash', function() {
     return gulp.src(fs.readdirSync('./dist').map(function(file) {
             return './dist/' + file;
         }))
-        .pipe(hashsum({
-            dest: './dist',
-            hash: 'sha256'
-        }));
+        .pipe(sri({
+            fileName: 'checksum.json',
+            algorithms: ['sha256']
+        }))
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('production', function() {
