@@ -58,6 +58,7 @@ a:focus {
 	position: fixed !important; 
 	top: 0 !important;
 	bottom: 0 !important; 
+	height: 100vh;
 	max-height: initial !important;
 	transform: initial;
 }
