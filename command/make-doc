@@ -3,10 +3,15 @@ const jsdocApi = require('jsdoc-api');
 const fs = require('fs');
 const fancyLog = require('fancy-log');
 const sentenceCase = require('sentence-case');
+const kebabCase = require('kebab-case');
 const moment = require('moment');
 
 const files = fs.readdirSync('./src/js').map(function(file) {
     return './src/js/' + file;
+});
+
+const hashes = fs.readFileSync('./dist/SHA256SUMS').toString().split('\n').map(function(row) {
+    return row.split('  ');  
 });
 
 const explainations = jsdocApi.explainSync({
@@ -44,6 +49,19 @@ for(let prototype of explainations) {
     let options = [];
     let examples = [];
     let since = prototype.since;
+
+    // fetch checksum value for the current file
+    let checksum = hashes.filter(function(hash) {
+        return hash[1] === (kebabCase(name) + '.min.js');
+    });
+
+    if( checksum.length < 1 ) {
+        fancyLog.error('could not find the hash of the file ' + name);
+
+        return;
+    }
+
+    checksum = checksum[0][0];
 
     for( let example of prototype.examples ) {
         examples.push(`
@@ -137,7 +155,7 @@ for(let prototype of explainations) {
                 </div>
                 <div class="panel-footer">
                     <div class="btn-group float-right">
-                        <button class="btn btn-primary cdn" data-url="${links[0]}">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <button class="btn btn-primary cdn" data-url="${links[0]}" data-checksum="${checksum}" data-algorithm="sha256">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
                     </div>	
