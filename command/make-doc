@@ -14,7 +14,9 @@ const explainations = jsdocApi.explainSync({
 });
 
 let prototypes = [];
+let prototype_links = [];
 let meta_keywords = [];
+let prototype_count = 0;
 
 for(let prototype of explainations) {
     if( prototype.undocumented === true || prototype.kind === 'package' ) {
@@ -86,6 +88,12 @@ for(let prototype of explainations) {
         options = `No options available.`;
     }
 
+    prototype_links.push(`
+        <li class="menu-item">
+            <a href="#${name}">${name}</a>
+        </li>
+    `);
+
     prototypes.push(`
         <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
             <div class="d-none" itemprop="codeSampleType">full solution</div>
@@ -137,6 +145,8 @@ for(let prototype of explainations) {
             </div>
         </div>
     `);
+
+    prototype_count++;
 
     fancyLog.info('generated documentation for ' + name + '.js');
 }
@@ -194,21 +204,21 @@ let page = `
             <header class="navbar">
                 <section class="navbar-section">
                     <div class="dropdown">
-                        <a class="btn btn-link btn-menu dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
-                        <ul class="menu">
+                        <a class="btn btn-link btn-menu dropdown-toggle" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
+                        <ul class="menu sidenav-menu">
                             <li class="menu-item">
                                 <a href="/prototype-storm/installation" disabled="true" tabindex="-1">Installation</a>
                             </li>
                             <li class="menu-item">
                                 <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
                             </li>
+                            <li class="divider" data-content="Prototypes (${prototype_count})"></li>
+                            ${prototype_links.join('')}
                         </ul>
                     </div>
                     <a href="/prototype-storm" class="navbar-brand mr-2 text-uppercase">
                         Prototype Storm
                     </a>
-                    <a href="/prototype-storm/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
-                    <a href="https://github.com/stellar-labs/prototype-storm" class="btn btn-link hide-sm">GitHub&nbsp; <i class="icon-social-github"></i></a>
                 </section>
                 <section class="navbar-section">
                     <div class="input-group input-inline">
@@ -220,9 +230,6 @@ let page = `
                     </div>
                 </section>
             </header>
-            <div class="divider">
-                
-            </div>
             <div class="container">
                 <div class="columns">
                     <div class="column col-12">

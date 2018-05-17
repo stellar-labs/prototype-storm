@@ -41,7 +41,9 @@ a:focus {
 .navbar {
 	padding-left: 7px;
     padding-right: 7px;
-    padding-top: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-bottom: .05rem solid #e7e9ed;
 }
 
 .navbar-brand {
@@ -50,6 +52,13 @@ a:focus {
 
 .tab-item-content {
 	padding-top: 20px;
+}
+
+.sidenav-menu {
+	position: fixed !important; 
+	top: 0 !important;
+	bottom: 0 !important; 
+	max-height: initial !important;
 }
 
 /* Overrides */

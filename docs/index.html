@@ -7,7 +7,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,is array,is boolean,is date,is number,is object,is regexp,is string,json,keys,last,log,map,nl2br,only,pass,replace all,shuffle,sum,to kebab case,to snake case,type,update,values" />
             <meta name="subject" content="Javascript prototypes to help you code less, and better." />
-            <meta name="revised" content="Wednesday, May 16, 2018, 8:58 PM" />
+            <meta name="revised" content="Thursday, May 17, 2018, 9:13 PM" />
             <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="pagename" content="Supercharge your Javascript!" />
@@ -16,7 +16,7 @@
             <meta name="rating" content="General" />
             <meta name="target" content="all" />
             <meta name="HandheldFriendly" content="True" />
-            <meta name="date" content="Wednesday, May 16, 2018, 8:58 PM" />
+            <meta name="date" content="Thursday, May 17, 2018, 9:13 PM" />
             <meta name="DC.title" content="Supercharge your Javascript!" />
             <meta name="apple-mobile-web-app-title" content="Prototype Storm - Supercharge your Javascript!">
             <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,29 +30,129 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.ttf">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/fonts/Simple-Line-Icons.woff2">
-            <link rel="stylesheet" type="text/css" href="/prototype-storm/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
-            <link rel="stylesheet" href="/prototype-storm/css/spectre-orange-theme.css" />
+            <link rel="stylesheet" type="text/css" href="/framework/highlightjs/9.12.0/css/atom-one-light.css"  />
+            <link rel="stylesheet" href="/css/spectre-orange-theme.css" />
             <link rel="manifest" href="/manifest.webmanifest" />
         </head>
         <body>
             <header class="navbar">
                 <section class="navbar-section">
                     <div class="dropdown">
-                        <a class="btn btn-link btn-menu dropdown-toggle show-sm" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
-                        <ul class="menu">
+                        <a class="btn btn-link btn-menu dropdown-toggle" tabindex="0"><i class="icon-menu"></i>&nbsp;</a>
+                        <ul class="menu sidenav-menu">
                             <li class="menu-item">
-                                <a href="/prototype-storm/installation" disabled="true" tabindex="-1">Installation</a>
+                                <a href="/installation" disabled="true" tabindex="-1">Installation</a>
                             </li>
                             <li class="menu-item">
                                 <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
                             </li>
+                            <li class="divider" data-content="Prototypes (25)"></li>
+                            
+        <li class="menu-item">
+            <a href="#average">average</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#ellipsis">ellipsis</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#empty">empty</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#flatten">flatten</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#format">format</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isArray">isArray</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isBoolean">isBoolean</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isDate">isDate</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isNumber">isNumber</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isObject">isObject</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isRegexp">isRegexp</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#isString">isString</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#json">json</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#keys">keys</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#last">last</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#log">log</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#map">map</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#nl2br">nl2br</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#pass">pass</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#shuffle">shuffle</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#sum">sum</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#toKebabCase">toKebabCase</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#toSnakeCase">toSnakeCase</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#update">update</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#values">values</a>
+        </li>
+    
                         </ul>
                     </div>
-                    <a href="/prototype-storm" class="navbar-brand mr-2 text-uppercase">
+                    <a href="" class="navbar-brand mr-2 text-uppercase">
                         Prototype Storm
                     </a>
-                    <a href="/prototype-storm/installation" disabled="true" tabindex="-1" class="btn btn-link hide-sm">Installation</a>
-                    <a href="https://github.com/stellar-labs/prototype-storm" class="btn btn-link hide-sm">GitHub&nbsp; <i class="icon-social-github"></i></a>
                 </section>
                 <section class="navbar-section">
                     <div class="input-group input-inline">
@@ -64,9 +164,6 @@
                     </div>
                 </section>
             </header>
-            <div class="divider">
-                
-            </div>
             <div class="container">
                 <div class="columns">
                     <div class="column col-12">
@@ -1526,14 +1623,14 @@
             <div id="toast" class="toast toast-primary">
                 <i class=""></i>&nbsp; <span></span>
             </div>
-            <script type="text/javascript" src="/prototype-storm/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/spectrecss-tabs.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/highlightjs.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/filter-prototypes.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/display-toast.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/copy-to-clipboard.js"></script>
-            <script type="text/javascript" src="/prototype-storm/js/on-click-copy-cdn.js"></script>
+            <script type="text/javascript" src="/framework/highlightjs/9.12.0/js/highlightjs.min.js"></script>
+            <script type="text/javascript" src="/js/spectrecss-tabs.js"></script>
+            <script type="text/javascript" src="/js/highlightjs.js"></script>
+            <script type="text/javascript" src="/js/filter-prototypes.js"></script>
+            <script type="text/javascript" src="/js/display-toast.js"></script>
+            <script type="text/javascript" src="/js/copy-to-clipboard.js"></script>
+            <script type="text/javascript" src="/js/on-click-copy-cdn.js"></script>
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119139201-1"></script>
-            <script type="text/javascript" src="/prototype-storm/js/google-analytics.js"></script>
+            <script type="text/javascript" src="/js/google-analytics.js"></script>
         </body>
     </html>
