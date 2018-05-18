@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const sri = require('gulp-sri');
 const rename = require('gulp-rename');
 const fs = require('fs');
+const browserify = require('gulp-browserify');
 
 gulp.task('build', ['production', 'hash']);
 
@@ -30,6 +31,7 @@ gulp.task('production', function() {
             compact: true,
             minified: true
         }))
+        .pipe(browserify())
         .pipe(rename({
             suffix: '.min'
         }))
@@ -43,5 +45,6 @@ gulp.task('production', function() {
             compact: true,
             minified: true
         }))
+        .pipe(browserify())
         .pipe(gulp.dest('./dist'));
 });
