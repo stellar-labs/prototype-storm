@@ -13,9 +13,9 @@ if( 'toKebabCase' in Object.prototype === false ) {
   Object.prototype.toKebabCase = function() {
     // String
     if( this.constructor === String ) {
-      return this.replace(/[^a-zA-Z0-9-]/g, '-')
-        .replace(/([A-Z])([A-Z])([a-z])/g, '$1-$2$3')
-        .replace(/([a-z])([A-Z])/g, '$1-$2')
+      return this.replace(/[^\p{Ll}\p{Lu}0-9-]/gu, '-')
+        .replace(/([\p{Lu}])([\p{Lu}])([\p{Ll}])/gu, '$1-$2$3')
+        .replace(/([\p{Ll}])([\p{Lu}])/gu, '$1-$2')
         .replace(/[-]{2}/g, '-')
         .replace(/^[-]/, '')
         .replace(/[-]$/, '')
