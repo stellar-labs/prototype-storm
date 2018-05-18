@@ -13,9 +13,9 @@ if( 'toSnakeCase' in Object.prototype === false ) {
     Object.prototype.toSnakeCase = function() {
         // String
         if( this.constructor === String ) {
-            return this.replace(/[^a-zA-Z0-9_]/g, '_')
-                .replace(/([a-z])([A-Z])/g, '$1_$2')
-                .replace(/([A-Z])([A-Z])([a-z])/g, '$1_$2$3')
+            return this.replace(/[^\p{Ll}\p{Lu}0-9_]/gu, '_')
+                .replace(/([\p{Ll}])([\p{Lu}])/gu, '$1_$2')
+                .replace(/([\p{Lu}])([\p{Lu}])([\p{Ll}])/gu, '$1_$2$3')
                 .replace(/[_]{2,}/g, '_')
                 .replace(/^_/, '')
                 .replace(/_$/, '')
