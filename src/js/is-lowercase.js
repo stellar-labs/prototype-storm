@@ -2,7 +2,7 @@
 
 if( 'isLowercase' in Object.prototype === false ) {
     /**
-     * @summary Returns true if the string is onl composed of lowercases.
+     * @summary Returns true if the string is only composed of lowercases.
      * @returns {Boolean}
      * @example 'hello'.isLowercase() // true
      * @example 'HELLO'.isLowercase() // false
