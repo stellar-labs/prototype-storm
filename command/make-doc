@@ -66,6 +66,12 @@ for(let prototype of explainations) {
     }
 
     for( let param of params ) {
+        if( param.type === undefined ) {
+            fancyLog.error('the prototype ' + prototype.name + ' has no type for the parameter ' + param.name);
+
+            return;
+        }
+        
         let type = param.type.names.join(' or ');
         let name = param.name.replace(/^[\w]+\./, '<span class="text-secondary">$&</span>');
         let description = param.description;
