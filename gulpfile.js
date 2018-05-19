@@ -7,6 +7,7 @@ const fs = require('fs');
 const browserify = require('gulp-browserify');
 
 gulp.task('build', ['production', 'hash']);
+gulp.task('production', ['prod', 'global-prod']);
 
 gulp.task('hash', function() {
     return gulp.src(fs.readdirSync('./dist').map(function(file) {
@@ -19,32 +20,36 @@ gulp.task('hash', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('production', function() {
-    // each files
+gulp.task('prod', function() {
     gulp.src(fs.readdirSync('./src/js').map(function(file) {
-            return './src/js/' + file;
-        }))
-        .pipe(babel({
-            presets: ['env'],
-            plugins: ['babel-plugin-transform-unicode-property-regex'],
-            comments: false,
-            compact: true,
-            minified: true
-        }))
-        .pipe(browserify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('./dist'))
-    // prototype-storm.min.js
-        .pipe(concat('prototype-storm.min.js'))
-        .pipe(babel({
-            presets: ['env'],
-            plugins: ['babel-plugin-transform-unicode-property-regex'],
-            comments: false,
-            compact: true,
-            minified: true
-        }))
-        .pipe(browserify())
-        .pipe(gulp.dest('./dist'));
+        return './src/js/' + file;
+    }))
+    .pipe(babel({
+        presets: ['env'],
+        plugins: ['babel-plugin-transform-unicode-property-regex'],
+        comments: false,
+        compact: true,
+        minified: true
+    }))
+    .pipe(browserify())
+    .pipe(rename({
+        suffix: '.min'
+    }))
+    .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('global-prod', function() {
+    gulp.src(fs.readdirSync('./src/js').map(function(file) {
+        return './src/js/' + file;
+    }))    
+    .pipe(babel({
+        presets: ['env'],
+        plugins: ['babel-plugin-transform-unicode-property-regex'],
+        comments: false,
+        compact: true,
+        minified: true
+    }))
+    .pipe(browserify())
+    .pipe(concat('prototype-storm.min.js'))
+    .pipe(gulp.dest('./dist'));
 });
