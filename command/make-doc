@@ -28,7 +28,9 @@ for(let prototype of explainations) {
 
     let name = prototype.name;
 
-    const size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js').size / 1000).toFixed(1);
+    let size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js').size / 1000);
+    
+    size = size > 1 ? size.toFixed(0) : size.toFixed(1);
 
     meta_keywords.push(sentenceCase(name).toLocaleLowerCase());
 
