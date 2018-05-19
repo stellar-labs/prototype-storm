@@ -5,9 +5,9 @@
             <meta charset="utf-8">
             <meta name="description" content="Supercharge your Javascript!" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,has math sign,is array,is boolean,is date,is lowercase,is number,is object,is regexp,is string,is uppercase,json,keys,last,log,map,nl2br,only,pass,replace all,shuffle,sum,to kebab case,to snake case,type,update,values" />
+            <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,has math sign,has uppercase,is array,is boolean,is date,is lowercase,is number,is object,is regexp,is string,is uppercase,json,keys,last,log,map,nl2br,only,pass,replace all,shuffle,sum,to kebab case,to snake case,type,update,values" />
             <meta name="subject" content="Javascript prototypes to help you code less, and better." />
-            <meta name="revised" content="Saturday, May 19, 2018, 2:22 PM" />
+            <meta name="revised" content="Saturday, May 19, 2018, 2:27 PM" />
             <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="pagename" content="Supercharge your Javascript!" />
@@ -16,7 +16,7 @@
             <meta name="rating" content="General" />
             <meta name="target" content="all" />
             <meta name="HandheldFriendly" content="True" />
-            <meta name="date" content="Saturday, May 19, 2018, 2:22 PM" />
+            <meta name="date" content="Saturday, May 19, 2018, 2:27 PM" />
             <meta name="DC.title" content="Supercharge your Javascript!" />
             <meta name="apple-mobile-web-app-title" content="Prototype Storm - Supercharge your Javascript!">
             <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -46,7 +46,7 @@
                             <li class="menu-item">
                                 <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
                             </li>
-                            <li class="divider" data-content="Prototypes (28)"></li>
+                            <li class="divider" data-content="Prototypes (29)"></li>
                             
         <li class="menu-item">
             <a href="#average">average</a>
@@ -70,6 +70,10 @@
     
         <li class="menu-item">
             <a href="#hasMathSign">hasMathSign</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#hasUppercase">hasUppercase</a>
         </li>
     
         <li class="menu-item">
@@ -543,9 +547,63 @@
                 </div>
                 <div class="panel-footer">
                     <div class="btn-group float-right">
-                        <button class="btn btn-primary cdn" data-url="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/has-math-sign.min.js" data-checksum="sha256-G4inZn2DgW2Pb8fGaCFLLOZ/qo/TDbvoPkX3jUgvDIg=">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <button class="btn btn-primary cdn" data-url="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/has-math-sign.min.js" data-checksum="sha256-r2W6bd+LS0ADvY0jZtuEumDXWjAbgCYmx8qzdq9gu4c=">CDN&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/blob/master/src/js/has-math-sign.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/blob/master/test/has-math-sign.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/blob/master/src/js/has-uppercase.js#L14</div>
+            <div class="panel" id="hasUppercase">
+                <div class="panel-header">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
+                        <a href="#hasUppercase" class="h5">#</a>
+                        <span class="text-bold"><strong itemprop="name">hasUppercase</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p itemprop="description">Returns true if the element contains an uppercase.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="hasUppercase-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="hasUppercase-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="hasUppercase-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
+                    <div class="tab-item-content" id="hasUppercase-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>Boolean</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="hasUppercase-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="hasUppercase-example" itemprop="exampleOfWork">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">'Hello'.hasUppercase() // true</code></pre>
+        
+            <pre class="code" data-lang="javascript"><code class="javascript">'hello'.hasUppercase() // false</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary cdn" data-url="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/has-uppercase.min.js" data-checksum="sha256-C0d6Mq9ko8j35jLLNT/dYWWVUcyU5k4ETnHm0tzSWPw=">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/blob/master/src/js/has-uppercase.js#L14" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/blob/master/test/has-uppercase.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
                     </div>	
                 </div>
             </div>
