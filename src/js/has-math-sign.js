@@ -14,7 +14,7 @@ if( 'hasMathSign' in Object.prototype === false ) {
     Object.prototype.hasMathSign = function() {
         // String
         if( this.constructor === String ) {
-            return /[\p{Sm}]/gu.test(this);
+            return /[\p{Math}]/gu.test(this);
         }
     };
 }
