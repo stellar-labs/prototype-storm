@@ -28,6 +28,8 @@ for(let prototype of explainations) {
 
     let name = prototype.name;
 
+    const size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js').size / 1000).toFixed(1);
+
     meta_keywords.push(sentenceCase(name).toLocaleLowerCase());
 
     if( 'returns' in prototype === false ) {
@@ -157,7 +159,7 @@ for(let prototype of explainations) {
                 </div>
                 <div class="panel-footer">
                     <div class="btn-group float-right">
-                        <button class="btn btn-primary cdn" data-url="${links[0]}" data-checksum="${checksum}">CDN&nbsp; <i class="icon-docs"></i></button>
+                        <button class="btn btn-primary cdn" data-url="${links[0]}" data-checksum="${checksum}">CDN (${size} Ko)&nbsp; <i class="icon-docs"></i></button>
                         <a href="${links[1]}#L${start_line}" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="${links[2]}" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
                     </div>	
