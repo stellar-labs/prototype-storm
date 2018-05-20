@@ -7,7 +7,7 @@ export default (() => {
      * @example {}.empty() // true
      * @example [].empty() // true
      * @example ''.empty() // true
-     * @example 0.empty() // true
+     * @example (0).empty() // true
      * @example new Regexp('').empty() // true
      * @since 0.1.0
      * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/empty.min.js
