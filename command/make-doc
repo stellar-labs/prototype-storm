@@ -28,7 +28,7 @@ for(let prototype of explainations) {
 
     let name = prototype.name;
 
-    let size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js').size / 1000);
+    let size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js.gz').size / 1000);
     
     size = size > 1 ? size.toFixed(0) : size.toFixed(1);
 
