@@ -1,5 +1,14 @@
 'use strict';
 
+/**
+ * @summary Returns the maximum number in the element.
+ * @returns {Number|null}
+ * @example [1, 2, 3].max() // 3
+ * @since 0.1.0
+ * @see https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/max.min.js
+ * @see https://github.com/stellar-labs/prototype-storm/blob/master/src/js/max.js
+ * @see https://github.com/stellar-labs/prototype-storm/blob/master/test/max.js
+ */
 if( 'max' in Object.prototype === false ) {
   Object.prototype.max = function() {
     // Array
