@@ -56,8 +56,7 @@ gulp.task('global-prod', function() {
 gulp.task('gzip', function() {
 	gulp.src('./dist/*.min.js')
 		.pipe(gzip({
-			level: 9,
-			memLevel: 9
+			level: 9
 		}))
 		.pipe(gulp.dest('./dist'));
 });
