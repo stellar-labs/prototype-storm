@@ -9,7 +9,7 @@ const should = require('chai').should();
 import '../src/js/is-boolean.js';
 
 describe('is-boolean', function() {
-    describe('it should exists', function() {
+    it('should exists', function() {
         should.exist(Object.prototype.isBoolean);
     });
 

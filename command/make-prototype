@@ -113,7 +113,7 @@ const should = require('chai').should();
 import '../src/js/` + prototype_name + `.js';
 
 describe('` + prototype_name + `', function() {
-    describe('it should exists', function() {
+    it('should exists', function() {
         should.exist(Object.prototype.` + camelcased_name + `);
     });
 

@@ -9,7 +9,7 @@ const should = require('chai').should();
 import '../src/js/is-date.js';
 
 describe('is-date', function() {
-    describe('it should exists', function() {
+    it('should exists', function() {
         should.exist(Object.prototype.isDate);
     });
 

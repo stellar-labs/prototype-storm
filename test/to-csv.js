@@ -9,11 +9,11 @@ const should = require('chai').should();
 import '../src/js/to-csv.js';
 
 describe('to-csv', function() {
-    describe('it should exists', function() {
+    it('should exists', function() {
         should.exist(Object.prototype.toCsv);
     });
 
-    describe('it should return the string representation of a simple double dimension array', function() {
+    it('should return the string representation of a simple double dimension array', function() {
         const input = [
             ['Name', 'Birth date', 'Role', 'Prefered language'],
             ['John', '1970-01-01', 'Co-founder', 'Javascript,PHP'],

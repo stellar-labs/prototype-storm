@@ -9,7 +9,7 @@ const should = require('chai').should();
 import '../src/js/is-object.js';
 
 describe('is-object', function() {
-    describe('it should exists', function() {
+    it('should exists', function() {
         should.exist(Object.prototype.isObject);
     });
 
