@@ -41,7 +41,7 @@
     "make:doc": "node command/make-doc",
     "make:prototype": "node command/make-prototype",
     "remove:prototype": "node command/remove-prototype",
-    "test:file": "mocha --require babel-core/register"
+    "test:file": "mocha -r chai/register-should --require babel-core/register"
   },
   "dependencies": {}
 }
