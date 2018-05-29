@@ -5,9 +5,9 @@
             <meta charset="utf-8">
             <meta name="description" content="Supercharge your Javascript!" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,has letter,has lowercase,has math sign,has number,has uppercase,is array,is boolean,is date,is lowercase,is number,is object,is regexp,is string,is uppercase,is valid date,is valid number,is,json,keys,last,log,map,nl2br,only,parse csv,parse date,parse int,pass,query strings,replace all,shuffle,sum,to csv,to kebab case,to snake case,type,update,values" />
+            <meta name="keywords" content="average,ellipsis,empty,except,flatten,format,has letter,has lowercase,has math sign,has number,has uppercase,is array,is boolean,is date,is lowercase,is number,is object,is regexp,is string,is uppercase,is valid date,is valid number,is,json,keys,last,log,map,nl2br,only,parse csv,parse date,parse int,pass,query strings,replace all,shuffle,sum,to csv,to kebab case,to query strings,to snake case,type,update,values" />
             <meta name="subject" content="Javascript prototypes to help you code less, and better." />
-            <meta name="revised" content="Tuesday, May 29, 2018, 9:17 PM" />
+            <meta name="revised" content="Tuesday, May 29, 2018, 10:26 PM" />
             <meta name="url" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="identifier-URL" content="https://stellar-labs.github.io/prototype-storm" />
             <meta name="pagename" content="Supercharge your Javascript!" />
@@ -16,7 +16,7 @@
             <meta name="rating" content="General" />
             <meta name="target" content="all" />
             <meta name="HandheldFriendly" content="True" />
-            <meta name="date" content="Tuesday, May 29, 2018, 9:17 PM" />
+            <meta name="date" content="Tuesday, May 29, 2018, 10:26 PM" />
             <meta name="DC.title" content="Supercharge your Javascript!" />
             <meta name="apple-mobile-web-app-title" content="Prototype Storm - Supercharge your Javascript!">
             <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -46,7 +46,7 @@
                             <li class="menu-item">
                                 <a href="https://github.com/stellar-labs/prototype-storm">GitHub &nbsp;<i class="icon-social-github"></i></a>
                             </li>
-                            <li class="divider" data-content="Prototypes (42)"></li>
+                            <li class="divider" data-content="Prototypes (43)"></li>
                             
         <li class="menu-item">
             <a href="#average">average</a>
@@ -198,6 +198,10 @@
     
         <li class="menu-item">
             <a href="#toKebabCase">toKebabCase</a>
+        </li>
+    
+        <li class="menu-item">
+            <a href="#toQueryStrings">toQueryStrings</a>
         </li>
     
         <li class="menu-item">
@@ -2475,6 +2479,58 @@
                         <button class="btn btn-primary cdn" data-url="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/to-kebab-case.min.js" data-checksum="sha256-RvPJ+rTGj1k/So868Ow4UB53EdUMdlQKXyHIuGmQ/is=">CDN (5 Ko)&nbsp; <i class="icon-docs"></i></button>
                         <a href="https://github.com/stellar-labs/prototype-storm/blob/master/src/js/to-kebab-case.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
                         <a href="https://github.com/stellar-labs/prototype-storm/blob/master/test/to-kebab-case.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    
+        <div class="column col-sm-12 col-md-6 col-lg-6 col-xl-4 col-4" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+            <div class="d-none" itemprop="codeSampleType">full solution</div>
+            <div class="d-none" itemprop="programmingLanguage">javascript</div>
+            <div class="d-none" itemprop="runtimePlatform">web</div>
+            <div class="d-none" itemprop="codeRepository">https://github.com/stellar-labs/prototype-storm/blob/master/src/js/to-query-strings.js#L13</div>
+            <div class="panel" id="toQueryStrings">
+                <div class="panel-header">
+                    <div class="panel-title" itemscope itemtype="http://schema.org/Thing">
+                        <a href="#toQueryStrings" class="h5">#</a>
+                        <span class="text-bold"><strong itemprop="name">toQueryStrings</strong></span>
+                        <span class="chip float-right">≥ 0.1.0</span>
+                        <p itemprop="description">Return a query string as a string from the element.</p>
+                    </div>
+                </div>
+                <div class="panel-nav">
+                    <ul class="tab tab-block">
+                        <li class="tab-item active" data-display="toQueryStrings-description">
+                            <a href="javascript:;">Description</a>
+                        </li>
+                        <li class="tab-item" data-display="toQueryStrings-options">
+                            <a href="javascript:;">Options</a>
+                        </li>
+                        <li class="tab-item" data-display="toQueryStrings-example">
+                            <a href="javascript:;">Example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" itemscope itemtype="http://schema.org/CreativeWork">
+                    <div class="tab-item-content" id="toQueryStrings-description">
+                        <div><br /></div>
+                        <div class="h5">Returns</div>    
+                        <p>String</p>
+                    </div>                    
+                    <div class="tab-item-content d-hide" id="toQueryStrings-options">
+                        No options available.
+                    </div>
+                    <div class="tab-item-content d-hide" id="toQueryStrings-example" itemprop="exampleOfWork">
+                        
+            <pre class="code" data-lang="javascript"><code class="javascript">({name: 'John', age: 21}).toQueryStrings() // name=John&age=21</code></pre>
+        
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group float-right">
+                        <button class="btn btn-primary cdn" data-url="https://cdn.rawgit.com/stellar-labs/prototype-storm/master/dist/to-query-strings.min.js" data-checksum="sha256-qw/I26GmBmu0W/p0sosW+Abb7Ug3/+56ge4O0ya/2D0=">CDN (0.6 Ko)&nbsp; <i class="icon-docs"></i></button>
+                        <a href="https://github.com/stellar-labs/prototype-storm/blob/master/src/js/to-query-strings.js#L13" class="btn">Source&nbsp; <i class="icon-action-redo"></i></a>
+                        <a href="https://github.com/stellar-labs/prototype-storm/blob/master/test/to-query-strings.js" class="btn">Tests&nbsp; <i class="icon-action-redo"></i></a>
                     </div>	
                 </div>
             </div>
