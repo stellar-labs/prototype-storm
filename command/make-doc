@@ -6,6 +6,11 @@ const sentenceCase = require('sentence-case');
 const kebabCase = require('kebab-case');
 const moment = require('moment');
 
+function toFixed(num, fixed) {
+    var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
+    return num.toString().match(re)[0];
+}
+
 const files = fs.readdirSync('./src/js').map(function(file) {
     return './src/js/' + file;
 });
@@ -30,7 +35,7 @@ for(let prototype of explainations) {
 
     let size = (fs.statSync('./dist/' + kebabCase(name) + '.min.js.gz').size / 1000);
     
-    size = size > 1 ? size.toFixed(0) : size.toFixed(1);
+    size = size >= 1 ? size.toFixed(0) : toFixed(size, 1);    
 
     meta_keywords.push(sentenceCase(name).toLocaleLowerCase());
 
