@@ -21,6 +21,10 @@ describe('query-strings', function() {
         'http://example.com/path/to/page?name=ferret&color=purple#cats&dogs'.queryStrings().should.deep.equal({name: 'ferret', color: 'purple'});
     });
 
+    it('should return the query strings decoded', function() {
+        'my%20test.asp?name=st%C3%A5le&car=saab'.queryStrings().should.deep.equal({name: 'ståle', car: 'saab'});
+    });
+
     it('should return an empty object if the url contains only hash', function() {
         'http://example.com/path/to/page#cats'.queryStrings().should.deep.equal({});
     });
@@ -34,6 +38,8 @@ describe('query-strings', function() {
     });
 
     it('should return an empty object if the string is not an URL', function() {
-        "hell world, how are you today ? Me I'm fine!".queryStrings().should.deep.equal({});
+        "hello world, how are you today? Me I'm fine!".queryStrings().should.deep.equal({});
     });
+
+    
 });

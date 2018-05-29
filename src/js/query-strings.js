@@ -23,7 +23,7 @@ if( 'queryStrings' in Object.prototype === false ) {
 					  let part = element.split('=');
 			
 					  if( part.length === 2 ) {
-						result[part[0]] = part[1];
+						result[decodeURI(part[0])] = decodeURI(part[1]);
 					  }
 				});
 			}
